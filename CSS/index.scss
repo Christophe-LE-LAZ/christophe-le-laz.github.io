@@ -1,0 +1,682 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+$primary:#DED557;
+$hovergold: #ded5576b;
+$fontfamily1: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+$fontfamily2: Georgia, 'Times New Roman', Times, serif;
+
+body {
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-attachment: fixed;
+    height:100vh;
+}  
+::selection {
+    background-color: $hovergold;
+}
+// DEBUT CSS HEADER//
+
+.header {
+    position: absolute;
+    height:50px;
+    z-index: 5;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    ul {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    li {
+        margin-left:20px;
+        margin-right: 20px;
+        margin-top: 10px;
+        margin-bottom:10px;
+        border: 1px solid rgb(200, 166, 12);
+        border-radius: 5px;
+        padding: 10px;
+        a {
+            display:block;
+            text-decoration: none;
+            text-align: center;
+            color:white;
+            font-family:$fontfamily1 ;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.header--logo{
+    display: none;
+}
+
+.header ul li:hover {
+    background-color: $primary;
+    transition: all 1s;
+    a {
+        color:black;
+    }
+}
+// FIN CSS HEADER //
+// DEBUT CSS CONTENU PRESENTATION//
+
+.presentation {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    width:100%;
+    min-height: 100vh;
+    overflow: hidden;
+   
+    
+    &--texte {
+        font-size: 40px;
+        font-family: $fontfamily1;
+    }
+}
+
+.hello {
+    color: $primary;
+    margin:20px 0;
+}
+.name {
+    color:white;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.metier {
+    margin-top: 20px;
+    font-size: 25px;
+    color:white;
+    font-weight: 100;   
+}
+.presentation--visuel img {
+   display:none;
+}
+#btn--apparition {
+    display:none;
+}
+.btn--move {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height:50px;
+    width: 50px;
+    border-radius: 50%;
+    transition: box-shadow .4s;
+    cursor: pointer;
+    
+    &:hover {
+        box-shadow: 0 0 0px 3px white;
+    }
+}
+.move--down--rebond {
+    position:absolute;
+    left: 13px;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    border-left: 2px ridge white;
+    border-bottom: 2px ridge white;
+    transform: rotate(-45deg);
+    -webkit-animation: down 2s infinite;
+    animation: down 1s alternate infinite;
+    box-sizing: border-box;
+}
+.r1 {
+    top: 10px;
+}
+// FIN CSS PRESENTATION //
+
+// DEBUT CSS SECTION 1 //
+.section {
+    width:100%;
+    padding:3% 10%;
+}
+.mes--competences {
+    background: #302b63a3;
+}
+h1 {
+    font-size: 14px;
+    color: $primary;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 10px 0 10px 0;
+    padding:10px 10px 0 10px;
+    text-align: center;  
+}
+h2 {
+    font-size:40px;
+    color:white;
+    letter-spacing: 1px;
+    margin: 0 0 15px 0;
+    padding:0 10px 10px 10px;
+    text-align: center; 
+}
+h3 {
+    color:white;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.services {
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-wrap: wrap;
+    img {
+        height:50px;
+        width:auto;
+        display: block;
+        margin:auto;
+        margin-bottom: 20px;
+    }
+}
+.service {
+    border: 1px solid $primary;
+    flex-basis: 100%;
+    height:auto;
+    margin:10px;
+    padding:20px;
+    &:hover {
+        border:2px solid $primary;
+    }
+}
+p {
+    color:white;
+    font-family: $fontfamily2;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: 100;
+}
+// FIN CSS SECTION 1 //
+// DEBUT CSS SECTION 2 //
+.projets {
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width:100%;
+    height:auto;
+    position:relative;   
+}
+.slider {
+    display:flex;
+    justify-content: flex-start;
+    width:90%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.slider--indicators {
+    display:none;
+}
+.slider::-webkit-scrollbar-thumb {
+ color: $primary;
+}
+.nav--btn {
+    display:none;
+}
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 25px;
+    background-color: #302b630b;
+    border-bottom: 1px solid $primary;
+    padding-bottom: 15px;
+    flex:0 0 100%;
+    scroll-snap-align: start;
+}
+.scale:hover {
+    transform: scale(1.15);
+    margin: 30px;
+}
+.card img {
+    height:230px;
+    width:100%;
+    border-radius: 5px;
+    display: block;
+    margin:auto;
+    object-fit: cover;
+}
+h4 {
+    color:$primary;
+    text-align: center;
+    margin: 10px 0;
+    width:100%;
+}
+h5 {
+    color:white;
+    text-align: center;
+    margin: 10px 0;
+    width:100%;
+}
+.card p {
+    margin:10px 0;
+    width:90%;
+}
+.ensavoirplus {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    text-decoration: none;
+    border: 1px solid $primary;
+    color:$primary;
+    &:hover {
+        background-color: $primary;
+        color: black;
+        cursor: pointer;
+    }
+}
+body::-webkit-scrollbar {
+    width:7px;
+    
+}
+body::-webkit-scrollbar-track {
+    background:#302b63;}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #0f0c29;
+    border-radius: 4px;
+    &:hover {
+        background-color:$hovergold;
+    }
+}
+// FIN CSS SECTION 2//
+// DEBUT CSS SECTION 3//
+.center {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon {
+    width: 65px;
+    height: 65px;
+    margin: 20px;
+    border-radius: 100%;
+    transition: all .4s;
+    cursor: pointer;
+}
+.icon:nth-child(1):hover {
+    box-shadow: 0 0 0px 10px #c71610;
+}
+.icon:nth-child(2):hover {
+    box-shadow: 0 0 0px 10px #0e76a8;
+}
+.icon:nth-child(3):hover {
+
+    box-shadow: 0 0 0px 10px #25D366;
+}
+.icon:nth-child(4):hover {
+
+    box-shadow: 0 0 0px 10px #5865F2;
+ 
+}
+.fa-envelope {
+    color:#c71610;
+    filter:drop-shadow(0 0 10px #c71610)
+}
+.fa-linkedin {
+    color:#0e76a8;
+    filter:drop-shadow(0 0 10px #0e76a8)
+}
+.fa-whatsapp {
+    color :#25D366;
+    filter: drop-shadow(0 0 10px #25D366)
+}
+.fa-discord{
+    color: #5865F2;
+    filter: drop-shadow(0 0 10px #5865F2)
+}
+// FIN SECTION 3//
+// DEBUT FOOTER//
+footer {
+    color:white;
+    height:10vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    font-family: $fontfamily1;
+}
+// DEBUT MEDIA QUERIES //
+@media screen and (max-width:500px) {
+    .icon {
+        margin:0px;
+    }
+}
+@media screen and (max-width: 680px) {
+    .projets{
+        width:100%;
+    }
+    .slider {
+        width:100%;
+    }
+}
+@media screen and (min-width: 650px) {
+    // CSS PRESENTATION //
+.header {
+    justify-content: space-around;
+}
+.header--logo {
+        display: block;
+        height: 50px;
+        transition: all 0.5s;
+        & img {
+           max-width: 100%;
+           height: 50px;
+           object-fit: cover;
+        }
+        &:hover {
+        color: white;
+        filter: drop-shadow(0 0 10px white)
+        }
+    }    
+.header li a.contacter {
+        font-size: 0;
+
+        &::before {
+            content:"ME CONTACTER";
+            font-size: 14px;
+        }
+}
+.first {
+    margin-left:-6px;
+}
+  // FIN CSS PRESENTATION //
+ // DEBUT CSS SECTION 1 //
+}
+@media screen and (min-width:700px) {
+    // CSS PRESENTATION //
+    .presentation--visuel {
+        margin:10px;
+        img {
+        display:block;
+        height:500px;
+        object-fit: contain;
+        animation: apparitionPhoto 2s ease-in-out;
+        }
+    }
+    .presentation--texte {
+        width: 50%;
+        position:relative;
+        animation: apparitionTexte 2s ease-in-out;
+        margin:10px;
+    }
+    // FIN CSS PRESENTATION //
+    // DEBUT CSS SECTION 1 //
+    .section {
+        width:100%;
+        padding:3% 10%;
+    }
+    .bg--sectionpaire {
+        background-color: #302b63a3;
+    }
+    h1, h2, h3 {
+        text-align: left; 
+    }
+    .services {
+        flex-wrap: nowrap;
+    }
+    // FIN CSS SECTION 1 //
+    // DEBUT CSS SECTION 2//
+    .slider--indicators {
+        display:flex;
+        justify-content: center;
+        padding: 5px 0;
+    }
+    .slider::-webkit-scrollbar{
+     display:none;
+    }
+
+    .indicator {
+        height: 10px;
+        width:10px;
+        border-radius: 50%;
+        background:rgba(255, 255, 255, 0.646);
+        margin: 4px;
+        cursor: pointer;
+        box-shadow: 0 1 3px rgba(0,0,0, 0.6);
+        transition: all 0.3s ease;
+        &:hover {
+        background:$primary;
+        }
+    }
+    .active {
+        background:$primary;
+        }
+    .ensavoirplus {
+        width:50%;
+    }
+}
+@media screen and (min-width:940px) {
+    // CSS PRESENTATION //
+    
+    .presentation--visuel img {
+        height:800px;   
+    }
+    .presentation {
+        position:relative;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    .hello {
+        color:rgb(211, 183, 24);
+        margin:20px 0;
+    }
+    .name {
+        color:white;
+        font-size: 75px;
+        font-weight: bold;
+    }
+    .first {
+        margin-left:-6px;
+    }
+    .metier {
+        font-size: 30px;
+        color:white;
+        font-weight: 100;
+        
+    }
+    // FIN CSS PRESENTATION //
+    // DEBUT CSS SECTION 1 //
+
+    .services img {
+            display:inline-block;
+            height:80px;
+        }
+    .service {
+        margin:20px;
+        padding:20px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    h3{
+        font-size: 35px;
+    }
+    p {
+        font-size: 20px;
+    }
+
+// FIN CSS SECTION 1//
+// DEBUT CSS SECTION 2 //
+.card {
+    flex:0 0 40%; 
+}
+h4 {
+    font-size: 25px;
+}
+h5 {
+    font-size: 30px;
+}
+.card p {
+    line-height: 25px;
+}
+
+.nav--btn {
+    display:block;
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    color:rgba(255, 255, 255, 0.646);
+    cursor:pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        color:white;
+        top:48%;
+    }
+}
+    
+.gonext {
+    left:100%; 
+}
+.goback {
+    right:105%;
+}
+//
+// DEBUT CSS SECTION ME CONTACTER //
+.icon {
+    margin:40px;
+}
+.icon:nth-child(1):hover {
+    
+    padding:40px;
+}
+.icon:nth-child(2):hover {
+   
+    padding:40px;
+}
+.icon:nth-child(3):hover {
+   
+    padding:40px;
+}
+.icon:nth-child(4):hover {
+    padding:40px;
+}
+}
+
+@media screen and (min-width: 1400px) {
+   
+    // DEBUT CSS SECTION 2//
+    
+.card img {
+        height: 400px;
+}
+// CSS NAVIGATION CARD //
+
+.projets {
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width:100%;
+    height:auto;
+    position:relative;   
+}
+.slider {
+    display:flex;
+    justify-content: flex-start;
+    width:90%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.slider--indicators {
+    display:flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+.indicator {
+    height: 10px;
+    width:10px;
+    border-radius: 50%;
+    background:rgba(255, 255, 255, 0.646);
+    margin: 4px;
+    cursor: pointer;
+    box-shadow: 0 1 3px rgba(0,0,0, 0.6);
+    transition: all 0.3s ease;
+    &:hover {
+    background:$primary;
+    }
+}
+.active {
+    background:$primary;
+    }
+
+.slider::-webkit-scrollbar {
+    
+    height:0 !important;
+}
+}
+  // FIN MEDIA QUERIES //
+
+  // DEBUT KEYFRAMES //
+
+  @keyframes apparitionPhoto
+{
+    0% {
+        
+        transform: rotate(90deg) translateY(-1000px);
+    }
+    100% {       
+    }
+} 
+
+@keyframes apparitionTexte {
+    0% {
+        transform: translateY(1000px);
+    }
+    100% {       
+    }
+}
+
+  @keyframes down {
+    0% {
+        transform: rotate(-45deg) translate(0,0);
+    }
+    20% {
+        transform: rotate(-45deg) translate(-10px, 10px);
+    }
+    40% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+}
+
+@keyframes apparitionBtnDown {
+    0% {
+        transform: translateY(1000px)
+    }
+    100% {
+    }
+}
+
+// FIN KEYFRAMES//
+
