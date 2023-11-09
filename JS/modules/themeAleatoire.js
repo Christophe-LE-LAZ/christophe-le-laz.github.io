@@ -1,6 +1,6 @@
 const themeAleatoire = {
 
-    arrayTheme : ['classique.tpl.php', 'sporti.tpl.php', 'fun.tpl.php'],
+    arrayTheme : ['classique.tpl.php', 'sportif.tpl.php', 'fun.tpl.php'],
     aleatoire : null,
     theme : null,
 
@@ -21,13 +21,13 @@ const themeAleatoire = {
         event.preventDefault();
         const liClassAnimation = document.querySelector('#aleatoireTheme');
         liClassAnimation.classList.add('tracking-out-expand-fwd');
-        const crochetG = document.querySelector('.content__container:before');
-        const crochetD = document.querySelector('.content__container:after');
-        crochetG.style.display = "none";
-        crochetD.style.display = "none";
+        // const crochetG = document.querySelector('.content__container:before');
+        // const crochetD = document.querySelector('.content__container:after');
+        // crochetG.style.display = "none";
+        // crochetD.style.display = "none";
         // themeAleatoire.hundleReplaceAnimation(event);
         let randomNumber = Math.floor(Math.random() * (3 - 0) + 0);
-        themeAleatoire.aleatoire.href = "../PHP/inc" + themeAleatoire.arrayTheme[randomNumber];
+        themeAleatoire.aleatoire.href = "/inc/" + themeAleatoire.arrayTheme[randomNumber];
         setTimeout(function() {
             window.location.href = themeAleatoire.aleatoire.href }, 600)
     },

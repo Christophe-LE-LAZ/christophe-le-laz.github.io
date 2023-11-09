@@ -1,4 +1,4 @@
 </main>
-<script src="../js/modules/themeAleatoire.js"></script>
+<script src="../JS/modules/themeAleatoire.js"></script>
 </body>
 </html>
