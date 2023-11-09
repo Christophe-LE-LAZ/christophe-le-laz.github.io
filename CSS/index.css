@@ -420,6 +420,7 @@ footer {
   }
   .header li a.contacter::before {
     content: "ME CONTACTER";
+    text-align: center;
     font-size: 14px;
   }
   .first {
