@@ -1,0 +1,217 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+html {
+
+font-size: 62.5%;
+
+}
+
+body {
+
+background: #FCFBF2;
+
+background-attachment: fixed;
+
+height: 100vh;
+
+}
+
+footer {
+
+color: black;
+
+height: 10vh;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+text-align: center;
+
+font-size: 14px;
+
+font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+}
+
+header {
+
+display:none !important;
+
+position: absolute;
+
+height: 50px;
+
+z-index: 5;
+
+top: 20px;
+
+left: 0;
+
+right: 20px;
+
+margin-top: 20px;
+
+margin-bottom: 20px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: right;
+
+}
+
+.nav--ul {
+
+display: flex;
+
+flex-wrap: wrap;
+
+justify-content: center;
+
+align-items: center;
+
+}
+
+.nav--li {
+
+margin-left: 2rem;
+
+margin-right: 2rem;
+
+margin-top: 4rem;
+
+margin-bottom: 1rem;
+
+border: 0.2rem solid lightgray;
+
+border-radius: 0.5rem;
+
+padding: 1rem;
+
+}
+
+.nav--li--a {
+
+display: block;
+
+width: 10rem;
+
+text-decoration: none;
+
+text-align: center;
+
+color: black;
+
+font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+font-size: 14px;
+
+font-weight: 400;
+
+letter-spacing: 1px;
+
+padding: 0 1rem;
+
+}
+
+.nav--li.first {
+
+background-color: #D7D7D7;
+
+border: 0.1rem solid #DBDBDA;
+
+}
+
+h1 {
+
+font-size: 40px;
+
+color: black;
+
+font-weight: 300;
+
+letter-spacing: 1px;
+
+margin: 10px 0 10px 0;
+
+padding: 10px 10px 0 10px;
+
+text-align: center;
+
+}
+
+h2 {
+
+color: black;
+
+font-size: 45px;
+
+font-weight: bold;
+
+}
+
+h3 {
+
+margin-top: 20px;
+
+font-size: 25px;
+
+color: black;
+
+font-weight: 100;
+
+}
+
+p {
+
+color: black;
+
+font-family: Georgia, "Times New Roman", Times, serif;
+
+text-align: justify;
+
+font-size: 14px;
+
+font-weight: 100;
+
+}
+
+.presentation {
+
+display: flex;
+
+align-items: center;
+
+text-align: center;
+
+justify-content: center;
+
+padding: 20px;
+
+width: 100%;
+
+min-height: 100vh;
+
+overflow: hidden;
+
+}
+
+.presentation--texte {
+
+font-size: 40px;
+
+font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+}
+
+.section {
+
+width: 100%;
+
+padding: 3% 10%;
+
+}
