@@ -215,3 +215,24 @@ width: 100%;
 padding: 3% 10%;
 
 }
+
+.section--softsskills {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.softsskills {
+    display: inline-block;
+    padding: 0 20px; /* Ajoutez un espacement entre les éléments si nécessaire */
+    animation: defilement 10s linear infinite;
+}
+
+@keyframes defilement {
+    0% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 100, 0, 0, 1);
+    }
+    100% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -100, 0, 0, 1);
+    }
+}
