@@ -335,26 +335,32 @@ padding: 3% 10%;
   
   /* animation softs-skills */
 
-.section--softsskills {
-    animation: defilement 10s linear infinite;
-    display: flex;
-    justify-content: space-between;
-    /* overflow: hidden; */
-    white-space: nowrap;
-}
-
-.softsskills {
-    display: inline-block;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    padding: 0 20px;
-}
-
-@keyframes defilement {
-     0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
+  .container {
+        overflow: hidden;
+        position: relative;
+      }
+  
+      .messagedefilant {
+        white-space: nowrap;
+        animation: defilement 20s linear infinite;
+      }
+  
+      .softsskills {
+        padding: 0 20px; /* Ajoutez un espacement entre chaque compétence */
+        display: inline-block;
+      }
+  
+      /* Pause l'animation au survol */
+      .messagedefilant:hover {
+        animation-play-state: paused;
+      }
+  
+      /* Animation du défilement */
+      @keyframes defilement {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
