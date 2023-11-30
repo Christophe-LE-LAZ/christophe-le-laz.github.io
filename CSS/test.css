@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    animation: defilement 30s linear infinite;
+
+  }
+  
+  span {
+    display: inline-block;
+    padding: 0 10px; /* Espace entre les spans */
+  }
+  
+  @keyframes defilement {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  span {
+    animation: defilement 16s linear infinite;
+  }
