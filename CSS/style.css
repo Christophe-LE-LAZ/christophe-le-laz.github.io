@@ -312,10 +312,9 @@ p {
         /* text-decoration: underline; */
         /* background-image: linear-gradient(to right, transparent 15%, red 55%, transparent 10%); */
         background: rgb(255, 255, 255);
-        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 30%, rgba(241, 53, 8, 1) 50%, rgba(255, 255, 255, 1) 70%);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 29%, rgba(241, 53, 8, 1) 50%,  rgba(255, 255, 255, 0) 71%);
         background-position: 0 100%;
         background-size: 100% 2px;
-        /* Ajustez l'épaisseur du soulignement ici */
         background-repeat: no-repeat;
         width: 100%;
         text-align: center;
@@ -400,8 +399,8 @@ img.symfony {
 }
 
 .wobble-hor-bottom {
-        -webkit-animation: wobble-hor-bottom 10s infinite both;
-        animation: wobble-hor-bottom 10s infinite both;
+        -webkit-animation: wobble-hor-bottom 10s linear infinite both;
+        animation: wobble-hor-bottom 10s linear infinite both;
 }
 
 /* ----------------------------------------
