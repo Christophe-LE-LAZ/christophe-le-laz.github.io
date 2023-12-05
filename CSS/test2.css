@@ -529,6 +529,7 @@ img.symfony {
     height: 50px;
     text-align: center;
     line-height: 50px;
+    font-size: 2rem;
 }
 
 #left-zone .list li.item input[type="radio"]~label:first-letter {
@@ -571,6 +572,7 @@ img.symfony {
 #left-zone .list li.item input[type="radio"]:checked~label {
     opacity: 1;
     animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    font-size: 2.5rem;
 }
 
 #left-zone .list li.item input[type="radio"]:checked~label.projet1 {
@@ -604,6 +606,7 @@ img.symfony {
 
 #right-zone {
     height: 100%;
+    width: 70%;
     flex-grow: 3;
 }
 
@@ -612,7 +615,6 @@ img.symfony {
     flex-direction: column;
     align-content: center;
     align-items: center;
-    justify-content: space-between;
     height: 100%;
     padding: 5rem;
 }
@@ -625,4 +627,8 @@ img.symfony {
 }
 #right-zone .content_projet4 {
     display: none;
+}
+
+#right-zone img, #right-zone h3, #right-zone p{
+    margin-bottom: 2rem;
 }
