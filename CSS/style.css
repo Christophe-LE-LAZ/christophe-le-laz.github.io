@@ -630,6 +630,7 @@ img.symfony {
         height: 800px;
         justify-content: left;
         margin: auto;
+        margin-top: 6rem;
         overflow: hidden;
         width: 70vw;
 }
