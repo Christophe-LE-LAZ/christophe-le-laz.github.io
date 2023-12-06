@@ -282,7 +282,8 @@ p {
 
 
 /* softs-skills */
-.section--skills, .section--realisations {
+.section--skills,
+.section--realisations {
         overflow: hidden;
         width: 100vw;
         display: flex;
@@ -312,7 +313,7 @@ p {
         /* text-decoration: underline; */
         /* background-image: linear-gradient(to right, transparent 15%, red 55%, transparent 10%); */
         background: rgb(255, 255, 255);
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 29%, rgba(241, 53, 8, 1) 50%,  rgba(255, 255, 255, 0) 71%);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 29%, rgba(241, 53, 8, 1) 50%, rgba(255, 255, 255, 0) 71%);
         background-position: 0 100%;
         background-size: 100% 2px;
         background-repeat: no-repeat;
@@ -479,3 +480,176 @@ img.symfony {
         }
 }
 
+/* slide */
+
+#left-zone {
+        align-items: center;
+        display: flex;
+        flex-grow: 0;
+        justify-content: left;
+        height: 75%;
+        width: 350px;
+}
+
+#left-zone .list {
+        align-content: stretch;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        list-style: none;
+}
+
+#left-zone .list li.item input[type="radio"] {
+        display: none;
+}
+
+#left-zone .list li.item input[type="radio"]~label {
+        display: block;
+        font-size: 2rem;
+        height: 50px;
+        line-height: 50px;
+        opacity: 0.5;
+        text-align: center;
+}
+
+#left-zone .list li.item input[type="radio"]~label:first-letter {
+        text-transform: uppercase;
+}
+
+#left-zone .list li.item input[type="radio"]~label:hover {
+        cursor: pointer;
+        opacity: 0.75;
+}
+
+#left-zone .list li.item input[type="radio"]~label.label_projet:before {
+        background-position: center;
+        background-size: 75% 75%;
+        background-repeat: no-repeat;
+        display: block;
+        height: 50px;
+        margin-left: 15px;
+        position: absolute;
+        width: 50px;
+}
+
+#left-zone .list li.item input[type="radio"]~label.projet1:before {
+        /* background-image: url("../images/soft/football.png"); */
+        content: '#1';
+}
+
+#left-zone .list li.item input[type="radio"]~label.projet2:before {
+        content: '#2';
+}
+
+#left-zone .list li.item input[type="radio"]~label.projet3:before {
+        content: '#3';
+}
+
+#left-zone .list li.item input[type="radio"]~label.projet4:before {
+        content: '#4';
+}
+
+#left-zone .list li.item input[type="radio"]:checked~label {
+        animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        font-size: 2.5rem;
+        opacity: 1;
+}
+
+#left-zone .list li.item input[type="radio"]:checked~label.projet1 {
+        border-right: solid 4px #d64541;
+        color: #d64541;
+}
+
+#left-zone .list li.item input[type="radio"]:checked~label.projet2 {
+        border-right: solid 4px #f5d76e;
+        color: #f5d76e;
+}
+
+#left-zone .list li.item input[type="radio"]:checked~label.projet3 {
+        border-right: solid 4px #00b16a;
+        color: #00b16a;
+}
+
+#left-zone .list li.item input[type="radio"]:checked~label.projet4 {
+        border-right: solid 4px #f27935;
+        color: #f27935;
+}
+
+#middle-border {
+        background-color: #eee;
+        flex-grow: 1;
+        height: 75%;
+        max-width: 2px;
+        z-index: 0;
+}
+
+#right-zone {
+        flex-grow: 3;
+        height: 100%;
+        width: 70%;
+}
+
+#right-zone i {
+        display: inline-block;
+        font-size: 1.5rem;
+        padding: 0 1rem;
+}
+
+#right-zone img,
+#right-zone h3,
+#right-zone p {
+        margin-bottom: 2rem;
+}
+
+#right-zone img {
+        height: 30rem;
+        object-fit: contain;
+        width: 70rem;
+}
+
+#right-zone p {
+        font-size: 1.6rem;
+}
+
+#right-zone .content {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 5rem;
+}
+
+#right-zone .content_projet2,
+#right-zone .content_projet3,
+#right-zone .content_projet4 {
+        display: none;
+}
+
+#right-zone .content_projet1,
+#right-zone .content_projet2,
+#right-zone .content_projet3,
+#right-zone .content_projet4 {
+        animation: slide-up 1000ms forwards, fade-in 500ms forwards;
+}
+
+#scene {
+        align-items: center;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        display: flex;
+        height: 800px;
+        justify-content: left;
+        margin: auto;
+        overflow: hidden;
+        width: 70vw;
+}
+
+@keyframes slide-up {
+        0% {
+                transform: translateY(100%);
+        }
+
+        100% {
+                transform: translateY(0%);
+        }
+}
