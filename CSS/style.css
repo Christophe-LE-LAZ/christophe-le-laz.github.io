@@ -277,7 +277,7 @@ p {
 }
 
 /* softs-skills */
-img.symfony {
+img#symfony {
         height: 11rem;
         width: 11rem;
 }
