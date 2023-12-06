@@ -26,9 +26,8 @@ const app = {
     },
   
     handleDisplayProject : function (event) {
-        event.preventDefault();
+       
         const itemValue = event.currentTarget.id;
-        console.log(itemValue)
         // Cacher tous les projets
         app.hideCurrentProject();
 

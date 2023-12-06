@@ -290,6 +290,7 @@ p {
     flex-direction: column;
     align-items: center;
     margin-top: 2.5rem;
+    padding-bottom: 1rem;
 }
 
 .container--skills {
@@ -489,15 +490,20 @@ img.symfony {
     display: flex;
     align-items: center;
     justify-content: left;
-    width: 1000px;
+    width: 70vw;
     height: 800px;
     margin: auto;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     overflow: hidden;
 }
 
-#scene i {
+#right-zone i {
     display: inline-block;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+#right-zone p {
+    font-size: 1.6rem;
 }
 
 #left-zone {
@@ -542,7 +548,6 @@ img.symfony {
 }
 
 #left-zone .list li.item input[type="radio"]~label.label_projet:before {
-    content: " ";
     display: block;
     position: absolute;
     width: 50px;
@@ -554,19 +559,23 @@ img.symfony {
 }
 
 #left-zone .list li.item input[type="radio"]~label.projet1:before {
-    background-image: url("../images/soft/football.png");
+    /* background-image: url("../images/soft/football.png"); */
+    content: '#1';
 }
 
 #left-zone .list li.item input[type="radio"]~label.projet2:before {
-    background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/53209-200.png');
+    content: '#2';
+
 }
 
 #left-zone .list li.item input[type="radio"]~label.projet3:before {
-    background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/14333-200.png');
+    content: '#3';
+
 }
 
 #left-zone .list li.item input[type="radio"]~label.projet4:before {
-    background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/9636-200.png');
+    content: '#4';
+
 }
 
 #left-zone .list li.item input[type="radio"]:checked~label {
@@ -632,3 +641,22 @@ img.symfony {
 #right-zone img, #right-zone h3, #right-zone p{
     margin-bottom: 2rem;
 }
+
+#right-zone img {
+    width: 70rem;
+    height: 30rem;
+    object-fit: contain;
+}
+
+@keyframes slide-up {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  #right-zone .content_projet1, #right-zone .content_projet2, #right-zone .content_projet3, #right-zone .content_projet4 {
+    animation: slide-up 1000ms forwards, fade-in 500ms forwards;
+  }
