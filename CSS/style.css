@@ -591,11 +591,21 @@ img#symfony {
         margin-bottom: 2rem;
 }
 
-#right-zone img {
+/* #right-zone img {
         height: 30rem;
         object-fit: contain;
         width: 70rem;
-}
+} */
+
+#right-zone img {
+        height: 30rem; 
+        object-fit: contain;
+        width:70rem; 
+        border-radius: 8px;
+        transform-origin: right center;
+        transform: perspective(1000px) rotateY(-10deg) scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
 
 #right-zone p {
         font-size: 1.6rem;
