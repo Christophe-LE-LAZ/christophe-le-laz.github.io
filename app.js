@@ -88,14 +88,14 @@ const app = {
                     // Utiliser setTimeout pour retarder l'apparition du bouton
                     setTimeout(function () {
                         scrollButton.style.display = 'flex';
-                    }, 2000); // Ajouter un délai de 500 millisecondes (0.5 secondes)
+                    },500); // Ajouter un délai de 500 millisecondes (0.5 secondes)
                 }
             } else {
                 // Cacher le bouton si la section n'est pas visible ou si l'utilisateur remonte
                 // Utiliser setTimeout pour retarder la disparition du bouton
                 setTimeout(function () {
                     scrollButton.style.display = 'none';
-                }, 300); // Ajouter un délai de 500 millisecondes (0.5 secondes)
+                }, 500); // Ajouter un délai de 500 millisecondes (0.5 secondes)
             }
 
             // Mettre à jour la position de défilement
