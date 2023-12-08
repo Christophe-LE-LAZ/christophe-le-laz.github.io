@@ -87,7 +87,7 @@ const app = {
                 if (scrollTop > lastScrollTop) {
                     // Utiliser setTimeout pour retarder l'apparition du bouton
                     setTimeout(function () {
-                        scrollButton.style.display = 'block';
+                        scrollButton.style.display = 'flex';
                     }, 500); // Ajouter un délai de 500 millisecondes (0.5 secondes)
                 }
             } else {
