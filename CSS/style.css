@@ -657,161 +657,102 @@ img#symfony {
 
 /* bouton scroll */
 
-
-
-.vibrate-1 {
-	-webkit-animation: vibrate-1 1.5s linear infinite both;
-	        animation: vibrate-1 1.5s linear infinite both;
-}
-
-
-/* ----------------------------------------
- * animation vibrate-1
- * ----------------------------------------
- */
- @-webkit-keyframes vibrate-1 {
-        0% {
-          -webkit-transform: translate(0);
-                  transform: translate(0);
-        }
-        20% {
-          -webkit-transform: translate(-2px, 2px);
-                  transform: translate(-2px, 2px);
-        }
-        40% {
-          -webkit-transform: translate(-2px, -2px);
-                  transform: translate(-2px, -2px);
-        }
-        60% {
-          -webkit-transform: translate(2px, 2px);
-                  transform: translate(2px, 2px);
-        }
-        80% {
-          -webkit-transform: translate(2px, -2px);
-                  transform: translate(2px, -2px);
-        }
-        100% {
-          -webkit-transform: translate(0);
-                  transform: translate(0);
-        }
-      }
-      @keyframes vibrate-1 {
-        0% {
-          -webkit-transform: translate(0);
-                  transform: translate(0);
-        }
-        20% {
-          -webkit-transform: translate(-2px, 2px);
-                  transform: translate(-2px, 2px);
-        }
-        40% {
-          -webkit-transform: translate(-2px, -2px);
-                  transform: translate(-2px, -2px);
-        }
-        60% {
-          -webkit-transform: translate(2px, 2px);
-                  transform: translate(2px, 2px);
-        }
-        80% {
-          -webkit-transform: translate(2px, -2px);
-                  transform: translate(2px, -2px);
-        }
-        100% {
-          -webkit-transform: translate(0);
-                  transform: translate(0);
-        }
-      }
-
-      #scrollButton {
+    #scrollButton {
         display: flex;
-        
-      }
-      
-      .arrow-up {
-        /* background-color: #111; */
+        justify-content: flex-end;
+        width: 95%;
+    }
+    
+    .scroll-up {
         height: 40px;
         width: 40px;
         display: block;
-        border: 1px solid #666;
+        outline: 1px solid rgba(666, 666, 666, 0.08);
         position: relative;
         cursor: pointer;
         transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
-        overflow: hidden;
-      }
-      
-      .arrow-slide {
-        left: 0;
-        top: -100%;
-        width: 100%;
-        height: 100%;
-        background: #666;
-        position: absolute;
-        display: block;
-        z-index: 0;
-      }
-      
-      .left-arm {
+    }
+    
+    .scroll-up svg line {
+        stroke-width: 1;
+        stroke: #aaa;
+        fill: none;
+        stroke-dasharray: 20;
+        transition: all 0.4s ease;
+    }
+    
+    .scroll-up:hover svg line.top {
+        transform: translateX(-40px);
+    }
+    
+    .scroll-up:hover svg line.bottom {
+        transform: translateX(40px);
+    }
+    
+    .scroll-up:hover svg line.left {
+        transform: translateY(40px);
+    }
+    
+    .scroll-up:hover svg line.right {
+        transform: translateY(-40px);
+    }
+    
+    .scroll-up .left-bar {
         position: absolute;
         z-index: 1;
         background-color: transparent;
         top: 19px;
-        left: 3px;
-        width: 20px;
+        left: 5px;
+        width: 18px;
         display: block;
         transform: rotate(-45deg);
-      }
-      
-      .left-arm:after {
+    }
+    
+    .scroll-up .left-bar:after {
         content: "";
         background-color: #666;
-        width: 20px;
+        width: 18px;
         height: 1px;
         display: block;
         border-radius: 1px;
         transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
         transform-origin: right center;
         z-index: -1;
-      }
-      
-      .right-arm {
+    }
+    
+    .scroll-up .right-bar {
         position: absolute;
         z-index: 1;
         background-color: transparent;
         top: 19px;
         left: 17px;
-        width: 20px;
+        width: 18px;
         display: block;
         transform: rotate(45deg);
         border-radius: 2px;
-      }
-      
-      .right-arm:after {
+    }
+    
+    .scroll-up .right-bar:after {
         content: "";
         background-color: #666;
-        width: 20px;
+        width: 18px;
         height: 1px;
         display: block;
         border-radius: 1px;
         transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
         transform-origin: left center;
         z-index: -1;
-      }
-      
-      .arrow-up:hover {
-        transition: all .1s;
-      }
-      
-      .arrow-up:hover .left-arm:after {
+    }
+    
+    .scroll-up:hover {
+        transition: all 0.1s;
+    }
+    
+    .scroll-up:hover .left-bar:after {
         transform: rotate(-10deg);
-      }
-      
-      .arrow-up:hover .right-arm:after {
+    }
+    
+    .scroll-up:hover .right-bar:after {
         transform: rotate(10deg);
-      }
-      
-      .arrow-up:hover .arrow-slide {
-        transition: all .4s ease-in-out;
-        transform: translateY(200%);
-      }
-      
-   
+    }
+    
