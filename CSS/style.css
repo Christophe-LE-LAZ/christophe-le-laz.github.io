@@ -102,7 +102,7 @@ footer {
       
       .button.type1::after {
         bottom: 0;
-        right: 0;
+        right: -20px;
         border-top-color: transparent;
         border-left-color: transparent;
         border-bottom-color: #435a6b;
