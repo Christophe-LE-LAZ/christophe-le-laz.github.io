@@ -63,10 +63,12 @@ p {
 }
 
 footer {
+        align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        padding: 3% 10%;
+        width: 100%;
 }
 
 /* header nav */
@@ -340,9 +342,12 @@ footer {
         margin-right: 10rem;
 }
 
-.section {
-        padding: 3% 10%;
-        width: 100%;
+section:nth-child(odd){
+background-color: #F4F8EA;
+}
+section:nth-child(even) {
+        background: linear-gradient(to bottom, #FAF8EA, #E8DC85, #FAF8EA); /* Dégradé de couleur pour les sections paires (de haut en bas) */
+        transition: background 0.5s ease; /* Transition sur la couleur de fond */
 }
 
 /* softs-skills */
@@ -427,6 +432,20 @@ img#symfony {
         padding-bottom: 2rem;
         overflow: hidden;
         width: 100vw;
+}
+
+.section--skills {
+        height: 80vh;
+         /* background-color: #E8DC85; dorée*/ 
+         /* background-color: #C2E0C0; vert */
+         background: linear-gradient(to bottom, #FAF8EA, #E8DC85); /* Dégradé de couleur pour les sections paires */
+  transition: background 0.5s ease; /* Transition sur la couleur de fond */
+}
+
+.section--skills h2:hover {
+        cursor: pointer;
+        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+  transition: box-shadow 0.3s ease-in-out; 
 }
 
 .section--skills img {
@@ -828,8 +847,3 @@ img#symfony {
         transform: rotate(10deg);
 }
 
-
-
-
-
-  
