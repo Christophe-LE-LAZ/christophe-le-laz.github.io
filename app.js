@@ -10,6 +10,7 @@ const app = {
   init: function () {
     // on attribut à notre const la valeur du bouton nouvelle tâche
     app.addClickBtnRealisation();
+    app.addClickChevronDown();
     app.addClickElH2Competences();
     app.addClickProjectEvents();
     app.showProject("projet1");
@@ -19,6 +20,10 @@ const app = {
   addClickBtnRealisation: function () {
     const liElNavHeader = document.querySelector(".nav--ul li.button.type1");
     liElNavHeader.addEventListener("click", app.handleShowListProjects);
+  },
+  addClickChevronDown: function () {
+    const chevronDownEl= document.querySelector(".container--chevron");
+    chevronDownEl.addEventListener("click", app.handleShowListCompetences);
   },
   addClickProjectEvents: function () {
     const liProjectElList = document.querySelectorAll("#left-zone li");
