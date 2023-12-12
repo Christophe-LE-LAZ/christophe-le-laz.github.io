@@ -102,8 +102,8 @@ footer {
         right: -20px;
         border-top-color: transparent;
         border-left-color: transparent;
-        border-bottom-color: #435a6b;
-        border-right-color: #435a6b;
+        border-bottom-color: #425B8A;
+        border-right-color: #425B8A;
 }
 
 .button.type1::before {
@@ -111,16 +111,16 @@ footer {
         left: 0;
         border-bottom-color: transparent;
         border-right-color: transparent;
-        border-top-color: #435a6b;
-        border-left-color: #435a6b;
+        border-top-color: #425B8A;
+        border-left-color: #425B8A;
 }
 
 .button.type1:hover::after,
 .button.type1:hover::before {
-        border-bottom-color: #435a6b;
-        border-right-color: #435a6b;
-        border-top-color: #435a6b;
-        border-left-color: #435a6b;
+        border-bottom-color: #425B8A;
+        border-right-color: #425B8A;
+        border-top-color: #425B8A;
+        border-left-color: #425B8A;
         width: 100%;
         height: 100%;
 }
@@ -130,7 +130,7 @@ footer {
 }
 
 .header--link--logo:hover {
-        filter: drop-shadow(0 0 10px black);
+        filter: drop-shadow(0 0 10px #425B8A);
         cursor: pointer;
 }
 
@@ -393,7 +393,7 @@ section:nth-child(even) {}
 
 .presentation h1 {
         color: #425B8A;
-        font-size: 4.5rem;
+        font-size: 6rem;
         font-weight: bold;
 }
 
