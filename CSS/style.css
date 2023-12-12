@@ -5,7 +5,8 @@ html {
 }
 
 body {
-        background: #FAF8EA;
+        /* background: #FAF8EA; */
+        background: #FFFDE7;
         background-attachment: fixed;
         font-family: 'Poppins', sans-serif;
         height: 100vh;
@@ -32,21 +33,15 @@ header {
         margin-right: 20rem;
 }
 
-h1 {
-        color: black;
+h2 {
         font-size: 4rem;
-        font-weight: 300;
+        font-weight: 100;
         letter-spacing: 0.1rem;
         margin: 1rem 0 1rem 0;
         padding: 1rem 1rem 0 1rem;
         text-align: center;
 }
 
-h2 {
-        color: black;
-        font-size: 4.5rem;
-        font-weight: bold;
-}
 
 h3 {
         color: black;
@@ -73,8 +68,8 @@ footer {
 
 /* header nav */
 
-  /* Button component */
-  .button {
+/* Button component */
+.button {
         position: relative;
         padding: 1em 1.5em;
         border: none;
@@ -83,15 +78,15 @@ footer {
         outline: none;
         font-size: 18px;
         margin: 1em 0.8em;
-      }
-      
-     
-      .button.type1 {
+}
+
+
+.button.type1 {
         color: #435a6b;
-      }
-      
-      .button.type1::after,
-      .button.type1::before {
+}
+
+.button.type1::after,
+.button.type1::before {
         content: '';
         display: block;
         position: absolute;
@@ -100,43 +95,45 @@ footer {
         border: 2px solid;
         transition: all 0.6s ease;
         border-radius: 2px;
-      }
-      
-      .button.type1::after {
+}
+
+.button.type1::after {
         bottom: 0;
         right: -20px;
         border-top-color: transparent;
         border-left-color: transparent;
         border-bottom-color: #435a6b;
         border-right-color: #435a6b;
-      }
-      
-      .button.type1::before {
+}
+
+.button.type1::before {
         top: 0;
         left: 0;
         border-bottom-color: transparent;
         border-right-color: transparent;
         border-top-color: #435a6b;
         border-left-color: #435a6b;
-      }
-      
-      .button.type1:hover::after,
-      .button.type1:hover::before {
+}
+
+.button.type1:hover::after,
+.button.type1:hover::before {
         border-bottom-color: #435a6b;
         border-right-color: #435a6b;
         border-top-color: #435a6b;
         border-left-color: #435a6b;
         width: 100%;
         height: 100%;
-      }
-      
-.header--link--logo{
+}
+
+.header--link--logo {
         margin-left: 8rem;
 }
-.header--link--logo:hover{
+
+.header--link--logo:hover {
         filter: drop-shadow(0 0 10px black);
         cursor: pointer;
-        }
+}
+
 .header--logo {
         max-width: 100%;
         height: 150px;
@@ -162,6 +159,13 @@ footer {
 }
 
 /* main presentation */
+section:nth-child(odd) {
+        /* background-color: #F4F8EA; */
+        background-color: #61BFAD;
+
+}
+
+section:nth-child(even) {}
 
 .bounce-in-right {
         animation: bounce-in-right 2.1s both;
@@ -172,12 +176,14 @@ footer {
         align-items: center;
         display: flex;
         justify-content: center;
-        min-height: 78vh;
+        min-height: 90vh;
         overflow: hidden;
         padding: 2rem;
         text-align: center;
         width: 100%;
 }
+
+
 
 /* animation photo */
 @-webkit-keyframes bounce-in-right {
@@ -301,6 +307,35 @@ footer {
 }
 
 /* contact presentation */
+.data--title {
+        position: relative;
+}
+
+.data--title::before,
+.data--title:hover::before {
+        background-color: #425B8A;
+        bottom: 100%;
+        border-radius: 5px;
+        content: attr(data-title);
+        color: #fff;
+        font-size: 1.4rem;
+        left: 50%;
+        padding: 5px;
+        position: absolute;
+        transform: translateX(-30%);
+        width: 80%;
+}
+
+.data--title::before {
+        opacity: 0;
+        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.data--title:hover::before {
+
+        opacity: 1;
+        transition: opacity 150ms linear, transform 150ms linear;
+}
 
 .presentation--contact {
         margin-top: 2rem;
@@ -319,7 +354,7 @@ footer {
 }
 
 .presentation--contact--li {
-        padding: 2rem;
+        padding: 4rem;
         position: relative;
 }
 
@@ -328,26 +363,53 @@ footer {
 }
 
 .presentation--contact--li svg {
-        fill: inherit;
+        /* fill: #8B4513; */
+        fill: #811453;
 }
 
 .presentation--contact--li:hover svg {
-        fill: #755cde;
+        fill: #425B8A;
         transform: translateY(-5px);
         white-space: pre-wrap;
 }
 
+/* end */
+
 .presentation--texte {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         font-size: 4rem;
         margin-right: 10rem;
+        height: 70vh;
+        width: 33vw;
 }
 
-section:nth-child(odd){
-background-color: #F4F8EA;
+.presentation--texte h1,
+.presentation--texte p,
+.presentation--texte h3 {
+        color: #425B8A;
 }
-section:nth-child(even) {
-        background: linear-gradient(to bottom, #FAF8EA, #E8DC85, #FAF8EA); /* Dégradé de couleur pour les sections paires (de haut en bas) */
-        transition: background 0.5s ease; /* Transition sur la couleur de fond */
+
+.presentation h1 {
+        color: #425B8A;
+        font-size: 4.5rem;
+        font-weight: bold;
+}
+
+.presentation--texte p {
+        font-size: 4rem;
+        font-weight: 100;
+        letter-spacing: 0.1rem;
+        margin: 1rem 0 1rem 0;
+        padding: 1rem 1rem 0 1rem;
+        text-align: center;
+}
+
+.presentation--visuel {
+        /* align-self: flex-start; */
+        height: 70vh;
+        width: 33vw;
 }
 
 /* softs-skills */
@@ -363,41 +425,7 @@ img#symfony {
         width: 100%;
 }
 
-.data--title {
-        position: relative;
-}
 
-.data--title::before {
-        background-color: #000;
-        bottom: 100%;
-        border-radius: 5px;
-        content: attr(data-title);
-        color: #fff;
-        font-size: 1.4rem;
-        left: 50%;
-        opacity: 0;
-        padding: 5px;
-        position: absolute;
-        transform: translateX(-50%);
-        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-}
-
-.data--title:hover::before {
-        /* Fond noir */
-        background-color: #000;
-        border-radius: 5px;
-        bottom: 100%;
-        content: attr(data-title);
-        /* Texte blanc */
-        color: #fff;
-        font-size: 1.4rem;
-        left: 50%;
-        opacity: 1;
-        padding: 5px;
-        position: absolute;
-        transform: translateX(-50%);
-        transition: opacity 150ms linear, transform 150ms linear;
-}
 
 
 .item-skill {
@@ -436,16 +464,12 @@ img#symfony {
 
 .section--skills {
         height: 80vh;
-         /* background-color: #E8DC85; dorée*/ 
-         /* background-color: #C2E0C0; vert */
-         background: linear-gradient(to bottom, #FAF8EA, #E8DC85); /* Dégradé de couleur pour les sections paires */
-  transition: background 0.5s ease; /* Transition sur la couleur de fond */
 }
 
 .section--skills h2:hover {
         cursor: pointer;
         box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
-  transition: box-shadow 0.3s ease-in-out; 
+        transition: box-shadow 0.3s ease-in-out;
 }
 
 .section--skills img {
@@ -846,4 +870,3 @@ img#symfony {
 .scroll-up:hover .right-bar:after {
         transform: rotate(10deg);
 }
-
