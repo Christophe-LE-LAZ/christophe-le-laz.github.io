@@ -8,13 +8,7 @@ body {
         /* background: #FAF8EA; */
         background: #FFFDE7;
         background-attachment: fixed;
-        /* font-family: 'Poppins', sans-serif;*/
-        /* font-family: 'Hammersmith One', sans-serif; */
-        /* font-family: 'Pacifico', cursive; */
-        /* font-family: 'Dosis', sans-serif; */
-        /* font-family: 'Montserrat', sans-serif; */
-        font-family: 'Poiret One', sans-serif;
-
+        font-family: 'Pacifico', cursive; 
         height: 100vh;
         overflow-x: hidden;
 }
@@ -167,8 +161,7 @@ footer {
 /* main presentation */
 section:nth-child(odd) {
         /* background-color: #F4F8EA; */
-        background-color: #61BFAD;
-
+        /* background-color: #61BFAD; */
 }
 
 section:nth-child(even) {}
@@ -192,9 +185,9 @@ section:nth-child(even) {}
 
 .presentation--content {
         display: flex;
-        justify-content: space-between; /* Ajoutez cette ligne pour espacer les divs sur la ligne */
+        justify-content: space-around; 
         align-items: stretch;
-        width: 100vw;
+        width: 60vw;
     }
     
 /* animation photo */
@@ -390,6 +383,7 @@ section:nth-child(even) {}
 .presentation--texte {
         display: flex;
         flex-direction: column;
+        font-family: 'Hammersmith One', sans-serif;
         justify-content: space-evenly;
         font-size: 4rem;
         margin-right: 10rem;
