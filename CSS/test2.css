@@ -820,14 +820,42 @@ img#symfony {
   }
   
   .skills-containers {
- display: flex;
-  }
-
-  .skill {
+        position: relative;
+        width: 60vw;
+        height: 50vh;
+        display: flex;
+      }
+      
+      .skills-containers::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #811453;
+        filter: blur(8px);
+        z-index: -1;
+        transform-origin: left center; /* Ajusté pour une inclinaison à droite au centre */
+        transform: perspective(1000px) rotateY(10deg) scale(1.1); /* Ajusté pour une inclinaison à droite */
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      .skill {
+        background-color: #FAF8EA;
         padding: 2rem;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-  }
-
+        justify-content: space-evenly;
+        width: 40rem;
+        height:10rem;
+        border-radius: 3rem;
+        transform-origin: left center; /* Ajusté pour une inclinaison à droite au centre */
+        transform: perspective(1000px) rotateY(10deg) scale(1.1); /* Ajusté pour une inclinaison à droite */
+        transition: transform 0.3s ease-in-out;
+      }
   
+      .skills-containers:hover::before {
+        transform: perspective(1000px) rotateY(0) scale(1);
+      }
+
+      
