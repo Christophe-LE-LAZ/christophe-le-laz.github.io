@@ -8,7 +8,7 @@ body {
         /* background: #FAF8EA; */
         background: #FFFDE7;
         background-attachment: fixed;
-        font-family: 'Pacifico', cursive; 
+        font-family: 'Pacifico', cursive;
         height: 100vh;
         overflow-x: hidden;
 }
@@ -143,6 +143,7 @@ footer {
 .nav--li--a {
         color: #495057;
         display: block;
+        font-family: 'Hammersmith One', sans-serif;
         font-size: 1.8rem;
         font-weight: 400;
         letter-spacing: 0.1rem;
@@ -172,24 +173,26 @@ section:nth-child(even) {}
 }
 
 .presentation {
+        align-content: center;
         align-items: center;
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
         min-height: 90vh;
         overflow: hidden;
-        padding: 2rem;
         text-align: center;
         width: 100%;
 }
 
 .presentation--content {
-        display: flex;
-        justify-content: space-around; 
         align-items: stretch;
-        width: 60vw;
-    }
-    
+        display: flex;
+        height: 70vh;
+        justify-content: space-evenly;
+        width: 80%;
+}
+
 /* animation photo */
 @-webkit-keyframes bounce-in-right {
         0% {
@@ -323,6 +326,7 @@ section:nth-child(even) {}
         border-radius: 5px;
         content: attr(data-title);
         color: #fff;
+        font-family: 'Hammersmith One', sans-serif;
         font-size: 1.4rem;
         left: 50%;
         padding: 5px;
@@ -384,11 +388,10 @@ section:nth-child(even) {}
         display: flex;
         flex-direction: column;
         font-family: 'Hammersmith One', sans-serif;
-        justify-content: space-evenly;
+        justify-content: space-around;
         font-size: 4rem;
         margin-right: 10rem;
-        flex: 1 1 50%;
-        min-width: 50%;
+
 }
 
 .presentation--texte h1,
@@ -407,14 +410,14 @@ section:nth-child(even) {}
         font-size: 4rem;
         font-weight: 100;
         letter-spacing: 0.1rem;
-        margin: 1rem 0 1rem 0;
-        padding: 1rem 1rem 0 1rem;
         text-align: center;
 }
 
 .presentation--visuel {
-        flex: 1 1 50%;
-        min-width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
 }
 
 
@@ -425,6 +428,7 @@ section:nth-child(even) {}
         align-items: center;
         width: 5vw;
         height: 10vh;
+
 }
 
 
@@ -438,6 +442,7 @@ section:nth-child(even) {}
         transform: scale(0.3);
         animation: move-chevron 3s ease-out infinite;
 }
+
 .container--chevron:hover {
         cursor: pointer;
 }
