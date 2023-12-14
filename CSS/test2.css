@@ -821,9 +821,12 @@ img#symfony {
   
   .skills-containers {
         position: relative;
-        width: 60vw;
-        height: 50vh;
+        width: 800px;
+        height: 350px;
         display: flex;
+        flex-wrap: wrap;
+        margin: 0 0 0 50rem;
+        perspective: 1000px;
       }
       
       .skills-containers::before {
@@ -834,27 +837,40 @@ img#symfony {
         right: 0;
         bottom: 0;
         background-color: #811453;
-        filter: blur(8px);
+        align-self: center;
+        padding: 20px;
+        box-shadow: -18px 17px 8px #ccc;
+        transform: rotateY(30deg);
+        border-radius: 20px;
+        border: 1px solid #eee;
+        border-left: none;
+        border-top: none;
         z-index: -1;
-        transform-origin: left center; /* Ajusté pour une inclinaison à droite au centre */
-        transform: perspective(1000px) rotateY(10deg) scale(1.1); /* Ajusté pour une inclinaison à droite */
-        transition: transform 0.3s ease-in-out;
+        filter: blur(1px);
+        transition: transform 0.3s ease-in-out; 
+      }
+
+      .row-skill {
+        transform: rotateY(30deg);
+        transition: transform 0.3s ease-in-out; 
+        display: flex;
       }
       
       .skill {
         background-color: #FAF8EA;
-        padding: 2rem;
+        
+        margin: 2rem;
+        /* display: flex;
+        justify-content: space-evenly; */
+        border-radius: 10px;
         display: flex;
-        justify-content: space-evenly;
-        width: 40rem;
-        height:10rem;
-        border-radius: 3rem;
-        transform-origin: left center; /* Ajusté pour une inclinaison à droite au centre */
-        transform: perspective(1000px) rotateY(10deg) scale(1.1); /* Ajusté pour une inclinaison à droite */
-        transition: transform 0.3s ease-in-out;
+        gap: 12px;
+        padding: 10px 12px;
+        width: clamp(9rem,3vw + 8.3rem,16rem);
+       
       }
   
-      .skills-containers:hover::before {
+      .skills-containers:hover::before, .skills-containers:hover .row-skill {
         transform: perspective(1000px) rotateY(0) scale(1);
       }
 
