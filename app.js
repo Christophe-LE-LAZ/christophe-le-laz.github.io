@@ -151,7 +151,7 @@ const app = {
       "Amusant",
     ];
 
-    const morphTime = 1;
+    const morphTime = 0.8;
     const cooldownTime = 0.25;
 
     let skillIndex = skillValues.length - 1;

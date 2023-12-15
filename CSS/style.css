@@ -639,21 +639,24 @@ section:nth-child(even) {}
         opacity: 1;
         position: absolute;
         transition: all .35s cubic-bezier(.215, .61, .355, 1);
-        width: 100%
+        width: 100%;
 }
 
 .skills .leftSide .skillsContainer:hover:before {
         background-size: 67px;
         box-shadow: inset 0 0 7rem hsla(89, 77%, 78%, .2);
-        opacity: .5
+        opacity: .5;
+        
 }
+
 
 
 .skills .leftSide .skillsContainer:hover {
-
         -webkit-transform: scale(1.01);
-        transform: scale(1.01)
+        transform: scale(1.01);
 }
+
+
 
 .skills .leftSide .skillRow {
         display: flex;
@@ -690,7 +693,7 @@ section:nth-child(even) {}
         position: absolute;
         width: 100%;
         display: inline-block;
-        color: #425B8A;
+        color: #811453;
         font-family: "Hammersmith One", sans-serif;
         font-size: 10rem;
         text-align: center;
