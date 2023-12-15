@@ -15,6 +15,7 @@ const app = {
     app.addClickProjectEvents();
     app.showProject("projet1");
     app.initScrollButton();
+    app.initAnimation();
   },
 
   addClickBtnRealisation: function () {
@@ -34,7 +35,7 @@ const app = {
   },
 
   addClickElH2Competences: function () {
-    const h2Competences = document.querySelector(".section--skills h2");
+    const h2Competences = document.querySelector("#competences h2");
     h2Competences.addEventListener("click", app.handleShowListCompetences);
   },
 
@@ -90,6 +91,7 @@ const app = {
       projetElement.style.display = "block";
     }
   },
+
   initScrollButton: function () {
     const scrollButton = document.getElementById("scrollButton");
     if (scrollButton) {
@@ -130,7 +132,97 @@ const app = {
       });
     }
   },
+
+  initAnimation: function () {
+    const elts = {
+      animateSkill1: document.querySelector(".animateSkill1"),
+      animateSkill2: document.querySelector(".animateSkill2"),
+    };
+
+    const skillValues = [
+      "Écoute Active",
+      "Aime Apprendre",
+      "Autonome",
+      "Esprit d'équipe",
+      "Communiquant",
+      "Organisé",
+      "Sportif",
+      "Résiliant",
+      "Amusant",
+    ];
+
+    const morphTime = 1;
+    const cooldownTime = 0.25;
+
+    let skillIndex = skillValues.length - 1;
+    let time = new Date();
+    let morph = 0;
+    let cooldown = cooldownTime;
+
+    elts.animateSkill1.textContent = skillValues[skillIndex % skillValues.length];
+    elts.animateSkill2.textContent = skillValues[(skillIndex + 1) % skillValues.length];
+
+    function doMorph() {
+      morph -= cooldown;
+      cooldown = 0;
+
+      let fraction = morph / morphTime;
+
+      if (fraction > 1) {
+        cooldown = cooldownTime;
+        fraction = 1;
+      }
+
+      setMorph(fraction);
+    }
+
+    function setMorph(fraction) {
+      elts.animateSkill2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+      elts.animateSkill2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+      fraction = 1 - fraction;
+      elts.animateSkill1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+      elts.animateSkill1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+      elts.animateSkill1.textContent = skillValues[skillIndex % skillValues.length];
+      elts.animateSkill2.textContent = skillValues[(skillIndex + 1) % skillValues.length];
+    }
+
+    function doCooldown() {
+      morph = 0;
+
+      elts.animateSkill2.style.filter = "";
+      elts.animateSkill2.style.opacity = "100%";
+
+      elts.animateSkill1.style.filter = "";
+      elts.animateSkill1.style.opacity = "0%";
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+
+      let newTime = new Date();
+      let shouldIncrementIndex = cooldown > 0;
+      let dt = (newTime - time) / 1000;
+      time = newTime;
+
+      cooldown -= dt;
+
+      if (cooldown <= 0) {
+        if (shouldIncrementIndex) {
+          skillIndex++;
+        }
+
+        doMorph();
+      } else {
+        doCooldown();
+      }
+    }
+
+    animate();
+  },
+
 };
 
-// Dès que la page est complètement chargée, on exécute la méthode init rangée dans le "module" task
+// Dès que la page est complètement chargée, on exécute la méthode init rangée dans le "module" app
 document.addEventListener("DOMContentLoaded", app.init);
