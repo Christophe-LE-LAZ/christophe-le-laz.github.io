@@ -8,19 +8,19 @@ body {
         /* background: #FAF8EA; */
         background: #FFFDE7;
         background-attachment: fixed;
-        font-family: 'Pacifico', cursive;
+        font-family: 'Hammersmith One', sans-serif;
         height: 100vh;
         overflow-x: hidden;
 }
-
 footer {
         align-items: center;
-        color: black;
         display: flex;
         font-size: 1.4rem;
-        height: 10vh;
+        flex-direction: column;
         justify-content: center;
         text-align: center;
+        padding: 3% 10%;
+        width: 100%;
 }
 
 header {
@@ -63,14 +63,13 @@ p {
         text-align: justify;
 }
 
-footer {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 3% 10%;
-        width: 100%;
+section {
+        margin: auto;
+        margin-bottom: 40rem;
 }
+section:first-of-type, section:last-of-type {
+        margin-bottom: 3rem;
+} 
 
 /* header nav */
 
@@ -166,12 +165,6 @@ footer {
 }
 
 /* main presentation */
-section:nth-child(odd) {
-        /* background-color: #F4F8EA; */
-        /* background-color: #61BFAD; */
-}
-
-section:nth-child(even) {}
 
 .bounce-in-right {
         animation: bounce-in-right 2.1s both;
@@ -508,122 +501,67 @@ section:nth-child(even) {}
 
 /* skills */
 #competences {
-        /* background-color: #BBCBD9; */
         padding: 20px;
         border-top-left-radius: 37px 140px;
         border-top-right-radius: 23px 130px;
         border-bottom-left-radius: 110px 19px;
         border-bottom-right-radius: 120px 24px;
-        border: solid 3px #6e7491;
+        border: solid 10px #6e7491;
         box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
         width: 90vw;
-        margin: auto;
-        /* transform: rotate(-1deg); */
-}
-
-
-.skillsContainer {
+        height: auto;
         display: flex;
-        gap: clamp(2rem, 1.3vw + 1.7rem, 5rem);
-        justify-content: center;
-        position: relative;
-        width: 100%;
-        z-index: 9
-}
-
-
-.skills {
+        flex-direction: row;
         align-items: center;
+        justify-content: flex-start;
+}
+#competences h2 {
+        width: 30%;
+}
+.skills {
+        align-items: flex-end;
         display: flex;
-        height: 75vh;
+        flex-direction: column;
+        height: 100%;
+        width: auto;
         justify-content: center;
-        padding: 3% 5% 1%;
-        -webkit-perspective: 50rem;
-        perspective: 50rem;
+        -webkit-perspective: 10000px;
+        perspective: 10000px;
         position: relative
 }
 
-.skills .skill {
-        /* background-color: #425B8A; */
-        border-radius: 10px;
-        display: flex;
-        gap: 12px;
-        padding: 10px 12px;
-        width: 400px;
-}
-
-.skills .skill .iconContainer {
-        align-items: center;
-        background-color: #a66b8f;
-        border-radius: 10px;
-        display: flex;
-        height: 100px;
-        justify-content: center;
-        width: 100px;
-}
-
-.skills .skill .iconContainer img {
-        height: 70%;
-        mix-blend-mode: luminosity;
-        opacity: .8
-}
-
-.skills .skill .skillContent {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: left;
-        text-transform: uppercase;
-        width: auto
-}
-
-.skills .skill .skillContent p {
-        color: #FFFDE7;
-        font-family: "Hammersmith One", sans-serif;
-        font-size: 2rem;
-        font-weight: 600;
-        line-height: 1.4;
-        margin: 0;
-        -webkit-user-select: none;
-        user-select: none
-}
-
-.skills .skill:nth-child(even) .skillContent p {
-        font-size: 2.5rem;
-}
-
 .skills .leftSide {
+
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 2%;
         height: 100%;
-        -webkit-transform: perspective(150rem) rotateY(15deg) translateZ(5px) translateX(70px);
-        transform: perspective(150rem) rotateY(15deg) translateZ(5px) translateX(70px);
-        -webkit-transform-origin: left;
-        transform-origin: left;
-        width: auto;
+        /* -webkit-transform: perspective(150rem) rotateY(-15deg) translateZ(5px) translateX(-70px);
+        transform: perspective(150rem) rotateY(-15deg) translateZ(5px) translateX(-70px);
+        -webkit-transform-origin: right;
+        transform-origin: right; */
+        width: 100%;
+        transition: transform 0.3s ease-in-out;
 }
 
 .skills .leftSide .skillsContainer {
         align-content: center;
         align-items: center;
-        /* -webkit-backdrop-filter: blur(15px);*/
-        backdrop-filter: blur(15px);
-        /* background-color: hsla(89,77%,78%,.05); */
-        /* background-color: #425b8a92; */
-        background-color: #811453;
-        border: 2px solid hsla(89, 77%, 78%, .2);
+        /* backdrop-filter: blur(15px); */
+        /* background-color: #811454b9; */
+        /* border: 2px solid hsla(89, 77%, 78%, .2); */
         border-radius: 10px;
         display: flex;
         flex-wrap: wrap;
         gap: 15px;
-        height: 700px;
+        height: auto;
         justify-content: center;
         padding: 2%;
         position: relative;
-        transition: all .8s cubic-bezier(.215, .61, .355, 1);
-        width: 70%;
+        /* transition: all .8s cubic-bezier(.215, .61, .355, 1); */
+        /* transition: all 1s linear; */
+        width: 100%;
         margin-bottom: 5rem;
 }
 
@@ -643,29 +581,63 @@ section:nth-child(even) {}
         width: 100%;
 }
 
-.skills .leftSide .skillsContainer:hover:before {
-        background-size: 67px;
-        box-shadow: inset 0 0 7rem hsla(89, 77%, 78%, .2);
-        opacity: .5;
-        
-}
+/* .skills .leftSide .skillsContainer:hover ~ .leftSide  {
+        -webkit-transform: perspective(0rem) rotateY(0deg) translateZ(0px) translateX(0px);
+        transform: perspective(0rem) rotateY(0deg) translateZ(0px) translateX(0px);
+        background-color: yellow;
+} */
 
 
-
-.skills .leftSide .skillsContainer:hover {
-        -webkit-transform: scale(1.01);
-        transform: scale(1.01);
-}
-
-
-
-.skills .leftSide .skillRow {
+.skills .skill {
+        border-radius: 10px;
         display: flex;
-        flex-direction: row;
-        gap: 20px;
-        height: 100%;
-        width: 100%
+        gap: 12px;
+        padding: 10px 12px;
+        width: 400px;
 }
+
+.skills .skill .iconContainer {
+        align-items: center;
+        background-color: #a66b8f;
+        border-radius: 10px;
+        display: flex;
+        height: 150px;
+        justify-content: center;
+        width: 150px;
+}
+
+.skills .skill .iconContainer img {
+        height: 70%;
+        mix-blend-mode: luminosity;
+        opacity: .8
+}
+
+.skills .skill .skillContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        text-transform: uppercase;
+        width: auto
+}
+
+.skills .skill .skillContent p {
+        /* color: #FFFDE7; */
+        color: #811453;
+        font-family: "Hammersmith One", sans-serif;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 1.4;
+        margin: 0;
+        -webkit-user-select: none;
+        user-select: none
+}
+
+.skills .skill:nth-child(even) .skillContent p {
+        font-size: 2.5rem;
+}
+
+
 
 /* right */
 
@@ -675,15 +647,12 @@ section:nth-child(even) {}
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: -50rem;
-        margin-top: -20rem;
         position: relative;
 }
 
 
 .container-animate {
         position: absolute;
-       
         margin: auto;
         width: 100vw;
         height: 80pt;
@@ -699,13 +668,23 @@ section:nth-child(even) {}
         display: inline-block;
         color: #811453;
         /* font-family: "Hammersmith One", sans-serif; */
-        font-family: 'Pacifico', cursive;
+        font-family: 'Hammersmith One', sans-serif;
         font-size: 10rem;
         text-align: center;
         user-select: none;
 }
 
 /* slide */
+
+.section--realisations {
+        border-top-left-radius: 37px 140px;
+        border-top-right-radius: 23px 130px;
+        border-bottom-left-radius: 110px 19px;
+        border-bottom-right-radius: 120px 24px;
+        border: solid 10px #6e7491;
+        box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+        width: 90vw;
+}
 
 #left-zone {
         align-items: center;

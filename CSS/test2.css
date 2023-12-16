@@ -847,7 +847,7 @@ img#symfony {
         border-top: none;
         z-index: -1;
         filter: blur(1px);
-        transition: transform 0.3s ease-in-out; 
+        transition: transform 0.3s ease-in-out;
       }
 
       .row-skill {

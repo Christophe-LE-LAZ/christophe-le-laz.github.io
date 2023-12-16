@@ -2,7 +2,8 @@ const app = {
   /**
    * Propriétés
    */
-
+  skillsContainer: document.querySelector(".skillsContainer"),
+  leftSide: document.querySelector(".leftSide"),
   /**
    * Méthodes
    */
@@ -13,6 +14,8 @@ const app = {
     app.addClickChevronDown();
     app.addClickElH2Competences();
     app.addClickProjectEvents();
+    // app.addMouseEnterSkillsContainerEl();
+    // app.addMouseLeaveSkillsContainerEl();
     app.showProject("projet1");
     app.initScrollButton();
     app.initAnimation();
@@ -23,7 +26,7 @@ const app = {
     liElNavHeader.addEventListener("click", app.handleShowListProjects);
   },
   addClickChevronDown: function () {
-    const chevronDownEl= document.querySelector(".container--chevron");
+    const chevronDownEl = document.querySelector(".container--chevron");
     chevronDownEl.addEventListener("click", app.handleShowListCompetences);
   },
   addClickProjectEvents: function () {
@@ -39,6 +42,22 @@ const app = {
     h2Competences.addEventListener("click", app.handleShowListCompetences);
   },
 
+  // addMouseEnterSkillsContainerEl: function () {
+  //   app.skillsContainer.addEventListener("mouseover", function () {
+  //     // Modifiez les propriétés du parent leftSide lors du survol
+  //     app.leftSide.style.webkitTransform =
+  //       "perspective(0rem) rotateY(0deg) translateZ(0px) translateX(0px)";
+  //     app.leftSide.style.transform =
+  //       "perspective(0rem) rotateY(0deg) translateZ(0px) translateX(0px)";
+  //   });
+  // },
+  // addMouseLeaveSkillsContainerEl: function () {
+  //   app.skillsContainer.addEventListener("mouseleave", function () {
+  //     // Rétablissez les propriétés par défaut du parent leftSide lorsque la souris quitte la zone
+  //     app.leftSide.style.webkitTransform = ""; // ou remplacez par les valeurs par défaut
+  //     app.leftSide.style.transform = ""; // ou remplacez par les valeurs par défaut
+  //   });
+  // },
 
   handleDisplayProject: function (event) {
     const itemValue = event.currentTarget.id;
@@ -62,7 +81,6 @@ const app = {
     }
   },
   handleShowListProjects: function (event) {
-   
     const sectionRealisation = document.getElementById("realisations");
     if (sectionRealisation) {
       sectionRealisation.scrollIntoView({ behavior: "smooth" });
@@ -72,6 +90,11 @@ const app = {
     const sectionCompetences = document.getElementById("competences");
     if (sectionCompetences) {
       sectionCompetences.scrollIntoView({ behavior: "smooth" });
+      setTimeout(function () {
+        // Ajoutez un retrait en pixels à la fenêtre
+        const retraitEnPixels = 50; // ajustez la valeur en fonction de vos besoins
+        window.scroll(0, window.scrollY - retraitEnPixels);
+      }, 1000); // ajustez la valeur du délai en fonction de vos besoins
     }
   },
   hideCurrentProject: function () {
@@ -159,8 +182,10 @@ const app = {
     let morph = 0;
     let cooldown = cooldownTime;
 
-    elts.animateSkill1.textContent = skillValues[skillIndex % skillValues.length];
-    elts.animateSkill2.textContent = skillValues[(skillIndex + 1) % skillValues.length];
+    elts.animateSkill1.textContent =
+      skillValues[skillIndex % skillValues.length];
+    elts.animateSkill2.textContent =
+      skillValues[(skillIndex + 1) % skillValues.length];
 
     function doMorph() {
       morph -= cooldown;
@@ -177,15 +202,23 @@ const app = {
     }
 
     function setMorph(fraction) {
-      elts.animateSkill2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+      elts.animateSkill2.style.filter = `blur(${Math.min(
+        8 / fraction - 8,
+        100
+      )}px)`;
       elts.animateSkill2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
 
       fraction = 1 - fraction;
-      elts.animateSkill1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+      elts.animateSkill1.style.filter = `blur(${Math.min(
+        8 / fraction - 8,
+        100
+      )}px)`;
       elts.animateSkill1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
 
-      elts.animateSkill1.textContent = skillValues[skillIndex % skillValues.length];
-      elts.animateSkill2.textContent = skillValues[(skillIndex + 1) % skillValues.length];
+      elts.animateSkill1.textContent =
+        skillValues[skillIndex % skillValues.length];
+      elts.animateSkill2.textContent =
+        skillValues[(skillIndex + 1) % skillValues.length];
     }
 
     function doCooldown() {
@@ -221,7 +254,6 @@ const app = {
 
     animate();
   },
-
 };
 
 // Dès que la page est complètement chargée, on exécute la méthode init rangée dans le "module" app
