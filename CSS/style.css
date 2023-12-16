@@ -513,20 +513,20 @@ section:first-of-type, section:last-of-type {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
 }
 #competences h2 {
-        width: 30%;
+        width: 50%;
 }
 .skills {
         align-items: flex-end;
         display: flex;
         flex-direction: column;
         height: 100%;
-        width: auto;
+        width: 50%;
         justify-content: center;
-        -webkit-perspective: 10000px;
-        perspective: 10000px;
+        /* -webkit-perspective: 10000px;
+        perspective: 10000px; */
         position: relative
 }
 
@@ -598,7 +598,7 @@ section:first-of-type, section:last-of-type {
 
 .skills .skill .iconContainer {
         align-items: center;
-        background-color: #a66b8f;
+        background-color: #811453;
         border-radius: 10px;
         display: flex;
         height: 150px;
