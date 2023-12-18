@@ -1,16 +1,26 @@
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 
+
+:root {
+        --bg-color: linear-gradient(to right, #24243E, #302B63, #0F0C29);
+        --text-primary : white;
+        --color-gold : rgb(211, 183, 24);
+        --drop-shadow : drop-shadow(0 0 10px white);
+        --font-family-primary : 'Hammersmith One', sans-serif;
+}
+
 html {
         font-size: 62.5%;
 }
 
 body {
-        /* background: #FAF8EA; */
-        background: #FFFDE7;
+        background: var(--bg-color, #302B63);
         background-attachment: fixed;
-        font-family: 'Hammersmith One', sans-serif;
+        font-family: var(--font-family-primary);
         height: 100vh;
+        margin: auto;
         overflow-x: hidden;
+        width: 90vw;
 }
 footer {
         align-items: center;
@@ -24,13 +34,9 @@ footer {
 }
 
 header {
-        align-items: center;
-        display: flex;
         height: 10vh;
-        justify-content: space-between;
-        margin-bottom: 2rem;
-        margin-top: 2rem;
-        margin-right: 20rem;
+        width: 100%;
+        margin: auto;
 }
 
 h2 {
@@ -42,9 +48,8 @@ h2 {
         text-align: center;
 }
 
-
 h3 {
-        color: black;
+       
         font-size: 2.5rem;
         font-weight: 100;
         margin-top: 2rem;
@@ -56,11 +61,8 @@ h4 {
         color: #425B8A;
 }
 
-p {
-        color: black;
-        font-size: 1.4rem;
-        font-weight: 100;
-        text-align: justify;
+nav {
+        width: 100%;
 }
 
 section {
@@ -75,93 +77,94 @@ section:first-of-type, section:last-of-type {
 
 /* Button component */
 .button {
-        position: relative;
-        padding: 1em 1.5em;
-        border: none;
         background-color: transparent;
+        border: none;
         cursor: pointer;
-        outline: none;
         font-size: 18px;
         margin: 1em 0.8em;
+        outline: none;
+        padding: 1em 1.5em;
+        position: relative;
 }
 
-
-.button.type1 {
-        color: #435a6b;
-}
 
 .button.type1::after,
 .button.type1::before {
+        border: 2px solid;
+        border-radius: 2px;
         content: '';
         display: block;
-        position: absolute;
-        width: 20%;
         height: 20%;
-        border: 2px solid;
-        transition: all 0.6s ease;
-        border-radius: 2px;
+        position: absolute;
+        transition: width 0.6s ease, height 0.6s ease;
+        width: 20%;
 }
 
 .button.type1::after {
         bottom: 0;
-        right: -20px;
         border-top-color: transparent;
         border-left-color: transparent;
-        border-bottom-color: #425B8A;
-        border-right-color: #425B8A;
+        border-bottom-color: var(--color-gold);
+        border-right-color: var(--color-gold);
+        right: 0px;
 }
 
 .button.type1::before {
-        top: 0;
-        left: 0;
         border-bottom-color: transparent;
         border-right-color: transparent;
-        border-top-color: #425B8A;
-        border-left-color: #425B8A;
+        border-top-color: var(--color-gold);
+        border-left-color: var(--color-gold);
+        left: 0;
+        top: 0;
 }
 
 .button.type1:hover::after,
 .button.type1:hover::before {
-        border-bottom-color: #425B8A;
-        border-right-color: #425B8A;
-        border-top-color: #425B8A;
-        border-left-color: #425B8A;
-        width: 100%;
+        border-bottom-color: var(--color-gold);
+        border-right-color: var(--color-gold);
+        border-top-color: var(--color-gold);
+        border-left-color: var(--color-gold);
         height: 100%;
+        width: 100%;
 }
+/* .button.type1:hover::after {
+        right: -20px;
+} */
 
-.header--link--logo {
+.header__logo--link {
         margin-left: 8rem;
+        transition: filter 0.8s;
 }
 
-.header--link--logo:hover {
-        filter: drop-shadow(0 0 10px #425B8A);
+.header__logo--link:hover {
         cursor: pointer;
+        filter: var(--drop-shadow);
 }
 
-.header--logo {
+.header__logo--img {
+        height: 200px;
         max-width: 100%;
-        height: 150px;
         object-fit: cover;
 }
 
-.nav--li--a {
-        color: #495057;
+.nav__li--a {
+        color: var(--text-primary);
         display: block;
         font-family: 'Hammersmith One', sans-serif;
-        font-size: 1.8rem;
+        font-size: 2.5rem;
         font-weight: 400;
         letter-spacing: 0.1rem;
+        margin: auto;
         text-align: center;
         text-decoration: none;
-        width: 10rem;
+        width: auto;
 }
 
-.nav--ul {
+.nav__ul {
         align-items: center;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
 }
 
 /* main presentation */
@@ -184,13 +187,45 @@ section:first-of-type, section:last-of-type {
         width: 100%;
 }
 
-.presentation--content {
+.presentation__content {
         align-items: stretch;
         display: flex;
         height: 70vh;
-        justify-content: space-evenly;
-        width: 80%;
+        justify-content: space-between;
+        width: 100%;
 }
+
+.presentation__content--texte {
+        display: flex;
+        flex-direction: column;
+        font-family: var(--font-family-primary);
+        justify-content: space-around;
+        font-size: 4rem;
+
+}
+
+.presentation__content--texte strong {
+        color: var(--text-primary);
+        font-size: 7.5rem;
+        font-weight: bold;
+}
+
+.presentation__content--texte p {
+        color: var(--color-gold);
+        font-size: 4rem;
+        font-weight: 100;
+        letter-spacing: 0.1rem;
+        text-align: center;
+}
+
+.presentation--visuel {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+
+
 
 /* animation photo */
 @-webkit-keyframes bounce-in-right {
@@ -320,18 +355,18 @@ section:first-of-type, section:last-of-type {
 
 .data--title::before,
 .data--title:hover::before {
-        background-color: #425B8A;
+        background-color:var(--color-gold);
         bottom: 100%;
         border-radius: 5px;
         content: attr(data-title);
-        color: #fff;
-        font-family: 'Hammersmith One', sans-serif;
+        color: var(--text-primary, white);
+        font-family: var(--font-family-primary);
         font-size: 1.4rem;
         left: 50%;
         padding: 5px;
         position: absolute;
-        transform: translateX(-30%);
-        width: 80%;
+        transform: translateX(-60%);
+        width: 90%;
 }
 
 .data--title::before {
@@ -346,6 +381,9 @@ section:first-of-type, section:last-of-type {
 }
 
 .presentation--contact {
+        align-items: center;
+        display: flex;
+        justify-content: center;
         margin-top: 2rem;
 }
 
@@ -362,7 +400,7 @@ section:first-of-type, section:last-of-type {
 }
 
 .presentation--contact--li {
-        padding: 4rem;
+        padding: 4rem 4rem 4rem 0;
         position: relative;
 }
 
@@ -371,53 +409,16 @@ section:first-of-type, section:last-of-type {
 }
 
 .presentation--contact--li svg {
-        /* fill: #8B4513; */
         fill: #811453;
 }
 
 .presentation--contact--li:hover svg {
-        fill: #425B8A;
+        fill: var(--color-gold);
         transform: translateY(-5px);
         white-space: pre-wrap;
 }
 
 /* end */
-
-.presentation--texte {
-        display: flex;
-        flex-direction: column;
-        font-family: 'Hammersmith One', sans-serif;
-        justify-content: space-around;
-        font-size: 4rem;
-        margin-right: 10rem;
-
-}
-
-.presentation--texte h1,
-.presentation--texte p,
-.presentation--texte h3 {
-        color: #425B8A;
-}
-
-.presentation h1 {
-        color: #425B8A;
-        font-size: 6rem;
-        font-weight: bold;
-}
-
-.presentation--texte p {
-        font-size: 4rem;
-        font-weight: 100;
-        letter-spacing: 0.1rem;
-        text-align: center;
-}
-
-.presentation--visuel {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-}
 
 
 
@@ -434,9 +435,7 @@ section:first-of-type, section:last-of-type {
 .chevron {
         position: absolute;
         width: 4.5rem;
-        /* Remplacer par la valeur résultante de 0.6rem * 3.5 */
         height: 0.48rem;
-        /* Remplacer par la valeur résultante de 0.6rem * 0.8 */
         opacity: 0;
         transform: scale(0.3);
         animation: move-chevron 3s ease-out infinite;
@@ -461,7 +460,7 @@ section:first-of-type, section:last-of-type {
         top: 0;
         height: 100%;
         width: 50%;
-        background: #2c3e50;
+        background: var(--color-gold);
 }
 
 .chevron:before {
