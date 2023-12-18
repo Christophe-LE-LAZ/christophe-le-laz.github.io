@@ -2,6 +2,8 @@ const app = {
   /**
    * Propriétés
    */
+  btnElSkillTechniques : document.querySelector(".skills .techniques"),
+  btnElSkillHumaines : document.querySelector(".skills .humaines"),
   skillsContainer: document.querySelector(".skillsContainer"),
   leftSide: document.querySelector(".leftSide"),
   /**
@@ -13,10 +15,21 @@ const app = {
     app.addClickBtnRealisation();
     app.addClickChevronDown();
     app.addClickElH2Competences();
+    app.addClickBtnSkillTechniques();
+    app.addClickBtnCloseSkillTechnqiues();
     app.addClickProjectEvents();
     app.showProject("projet1");
     app.initScrollButton();
     app.initAnimation();
+  },
+
+  addClickBtnSkillTechniques: function() {
+        app.btnElSkillTechniques.addEventListener("click", app.handleShowListSkillTechniques)
+  },
+
+  addClickBtnCloseSkillTechnqiues : function () {
+    const btnElCloseSkillTechniques = document.querySelector('button.button__close');
+    btnElCloseSkillTechniques.addEventListener("click", app.handleHiddenListSkillTechniques)
   },
 
   addClickBtnRealisation: function () {
@@ -40,6 +53,7 @@ const app = {
     h2Competences.addEventListener("click", app.handleShowListCompetences);
   },
 
+ 
   handleDisplayProject: function (event) {
     const itemValue = event.currentTarget.id;
     // Cacher tous les projets
@@ -94,6 +108,27 @@ const app = {
     if (projetElement) {
       projetElement.style.display = "block";
     }
+  },
+
+  handleShowListSkillTechniques : function () {
+  app.btnElSkillTechniques.style.opacity = 0;
+  app.btnElSkillTechniques.style.height = 0;
+  app.btnElSkillHumaines.style.opacity = 0;
+  app.btnElSkillHumaines.style.height = 0;
+  app.leftSide.style.height = "100%";
+  app.leftSide.style.opacity = 1;
+  app.leftSide.style.transform = "translateY(0)"; 
+  },
+
+  handleHiddenListSkillTechniques : function () {
+    // app.leftSide.style.display = "none";
+    app.leftSide.style.opacity = 0;
+    app.leftSide.style.height = 0;
+    app.leftSide.style.transform = "translateY(-1000%)"; 
+    app.btnElSkillTechniques.style.opacity = 1;
+    app.btnElSkillTechniques.style.height = 1;
+    app.btnElSkillHumaines.style.opacity = 1;
+    app.btnElSkillHumaines.style.height = 1;
   },
 
   initScrollButton: function () {
