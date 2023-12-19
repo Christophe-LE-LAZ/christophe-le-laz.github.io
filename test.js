@@ -136,31 +136,33 @@ const app = {
   },
 
   handleShowListSkillTechniques: function () {
+    // app.skillsChoiceContainer.classList.add('skills__choice--container--hidden');
     app.skillsChoiceContainer.style.display = "none";
-    app.skillsChoiceContainer.style.height = "O";
     app.btnElCloseSkill.style.display = "block";
     app.leftSide.classList.add("skills__active");
   },
 
   handleShowListSkillHumaines: function () {
+    // app.skillsChoiceContainer.classList.add('skills__choice--container--hidden');
     app.skillsChoiceContainer.style.display = "none";
-    app.skillsChoiceContainer.style.height = "0";
     app.btnElCloseSkill.style.display = "block";
     app.rightSide.classList.add("skills__active");
   },
 
   handleHiddenListSkillTechniques: function () {
+    // app.skillsChoiceContainer.classList.remove('skills__choice--container--hidden');
     app.leftSide.classList.remove("skills__active");
     app.btnElCloseSkill.style.display = "none";
     app.skillsChoiceContainer.style.display = "flex";
-    app.skillsChoiceContainer.style.height = "100%";
+     
   },
 
   handleHiddenListSkillHumaines: function () {
+    // app.skillsChoiceContainer.classList.remove('skills__choice--container--hidden');
     app.rightSide.classList.remove("skills__active");
     app.btnElCloseSkill.style.display = "none";
     app.skillsChoiceContainer.style.display = "flex";
-    app.skillsChoiceContainer.style.height = "100%";
+
   },
 
   initScrollButton: function () {

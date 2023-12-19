@@ -5,8 +5,12 @@
         --bg-color: linear-gradient(to right, #24243E, #302B63, #0F0C29);
         --text-primary: white;
         --color-gold: rgb(211, 183, 24);
-        --drop-shadow: drop-shadow(0 0 10px white);
+        --drop-shadow: drop-shadow(0 0 10px #d3d3d3);
         --font-family-primary: 'Hammersmith One', sans-serif;
+        --text--shadow :  0 0 10px var(--color1),
+        0 0 20px var(--color1),
+        0 0 40px var(--color1),
+        0 0 80px var(--color1);
 
 }
 
@@ -27,12 +31,13 @@ body {
 footer {
         align-items: center;
         display: flex;
-        font-size: 1.4rem;
+        font-size: 2rem;
         flex-direction: column;
         justify-content: center;
         text-align: center;
         padding: 3% 10%;
         width: 100%;
+        color: #d3d3d3;
 }
 
 header {
@@ -542,7 +547,11 @@ section:last-of-type {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        height: 100%;   
+        height: 100%;
+        opacity: 1;
+        /* transform: translateY(0); */
+        /* animation: FadeIn--choice 0.5s ease-in-out; */
+        transition: none;
 }
 
 .skills button.skills__choice {
@@ -562,19 +571,17 @@ section:last-of-type {
 
 
 .leftSide {
-
+        align-content: center;
+        animation: roll-out-right .5s ease-in-out;
         display: none;
         flex-direction: row;
         flex-wrap: wrap;
-        align-content: center;
         gap: 2%;
-       
-        width: 100%;
+        height: 100%;
         opacity: 0;
-        transform: translateY(-1000%);
-        animation: FadeOut .5s ease-in-out;
+        transform: translatex(800%);
+        width: 100%;
 }
-
 
 
 .skills .leftSide .skillsContainer {
@@ -726,23 +733,22 @@ button.button__close:hover .inner:after {
 /* right */
 
 .rightSide {
-        width: 100%;
-        height: 200px;
+        align-items: center;
+        animation: FadeOut--skills .5s ease-in-out;
         display: none;
         flex-direction: column;
-        align-items: center;
+        height: 100%;
         justify-content: center;
+        opacity: 0;
         position: relative;
+        transform: translateY(-1000%);
+        width: 100%;
 }
 
 
 .container-animate {
-        position: absolute;
         margin: auto;
-        width: 100vw;
-        height: 80pt;
-        top: 0;
-        bottom: 0;
+        width: 100%;
         filter: url(#threshold) blur(0.6px);
 }
 
@@ -762,31 +768,39 @@ button.button__close:hover .inner:after {
 .skills__active {
         display: flex;
         opacity: 1;
-        transform: translateY(0);
-        animation: FadeIn .5s ease-in-out;
+        transform: translateX(0);
+        animation: roll-in-right 0.3s ease-out both;
+}
+
+.skills__choice--container--hidden {
+        display: none;
+        opacity: 0;
+        height: 0;
+        transform: translateY(-1000%);
+        animation: FadeOut--choice .5s ease-in-out;
 }
 
 /* animations display leftSide rightSide */
-@keyframes FadeIn {
+@keyframes FadeIn--skills {
         0% {
                 display: none;
                 opacity: 0;
-                transform: translateY(-1000%);
+                transform: translateY(1000%);
         }
 
         1% {
-                display: block;
-                opacity: 0;
+                display: none;
+                opacity: 1;
                 transform: translateY(0);
         }
 
         100% {
-                opacity: 1;
-               
+                display: block;
+
         }
 }
 
-@keyframes FadeOut {
+@keyframes FadeOut--skills {
         0% {
                 display: block;
                 opacity: 1;
@@ -796,14 +810,93 @@ button.button__close:hover .inner:after {
         99% {
                 display: block;
                 opacity: 0;
+                transform: translateY(1000%);
+        }
+
+        100% {
+                display: none;
+
+        }
+}
+
+
+@keyframes roll-in-right {
+        0% {
+                -webkit-transform: translateX(800%) rotate(540deg);
+                transform: translateX(800) rotate(540deg);
+                opacity: 0;
+                display: none;
+        }
+
+        99% {
+                -webkit-transform: translateX(0) rotate(0deg);
+                transform: translateX(0) rotate(0deg);
+                opacity: 1;
+        }
+
+        100% {
+                display: flex;
+        }
+}
+
+@keyframes roll-out-right {
+        0% {
+                -webkit-transform: translateX(0) rotate(0deg);
+                transform: translateX(0) rotate(0deg);
+                opacity: 1;
+                display: flex;
+        }
+
+        99% {
+                -webkit-transform: translateX(800%) rotate(540deg);
+                transform: translateX(800%) rotate(5400deg);
+                opacity: 0;
+        }
+
+        100% {
+                display: flex;
+        }
+}
+
+@keyframes FadeIn--choice {
+        0% {
+                display: none;
+                opacity: 0;
+                transform: translateY(-1000%);
+
+        }
+
+        1% {
+                display: none;
+                transform: translateY(0);
+                opacity: 1;
+        }
+
+        100% {
+                display: flex;
+
+        }
+}
+
+@keyframes FadeOut--choice {
+        0% {
+                display: flex;
+                opacity: 1;
+                transform: translateY(0);
+        }
+
+        1% {
+                display: flex;
+                opacity: 0;
                 transform: translateY(-1000%);
         }
 
         100% {
                 display: none;
-                opacity: 0;
+
         }
 }
+
 
 
 /* slide */
@@ -1103,3 +1196,35 @@ button.button__close:hover .inner:after {
 .scroll-up:hover .right-bar:after {
         transform: rotate(10deg);
 }
+
+
+.footer__contacts h3 {
+        text-shadow: var(--text--shadow);
+        filter: saturate(60%);
+        color: #d3d3d3;
+        font-size: 4rem;
+}
+
+.footer__contacts--nav {
+        display: flex;
+}
+
+.footer__contacts .presentation--contact--li {
+        padding: 4rem;
+}
+
+.footer__contacts .presentation--contact--li.data--title::before, .footer__contacts .presentation--contact--li.data--title:hover::before {
+        background-color: red;
+        bottom: 100%;
+        border-radius: 5px;
+        content: attr(data-title);
+        color: var(--text-primary, white);
+        font-family: var(--font-family-primary);
+        font-size: 1.4rem;
+        left: 50%;
+        padding: 5px;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 90%;
+}
+
