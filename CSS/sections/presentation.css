@@ -1,0 +1,98 @@
+/* main presentation */
+
+.bounce-in-right {
+    animation: bounce-in-right 2.1s both;
+    -webkit-animation: bounce-in-right 2.1s both;
+}
+
+.presentation {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 90vh;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+
+.presentation__content {
+    align-items: stretch;
+    display: flex;
+    height: 70vh;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.presentation__content--texte {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-primary);
+    justify-content: space-around;
+    font-size: 4rem;
+
+}
+
+.presentation__content--texte strong {
+    color: var(--text-primary);
+    font-size: 7.5rem;
+    font-weight: bold;
+}
+
+.presentation__content--texte p {
+    color: var(--color-gold);
+    font-size: 4rem;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+.presentation--visuel {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.presentation--contact {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.presentation--contact a {
+    display: inline-block;
+    font-weight: 400;
+    height: 35px;
+    line-height: 1.45;
+    margin: 0;
+    position: relative;
+    text-decoration: none;
+    user-select: text;
+    width: 35px;
+}
+
+.presentation--contact--li {
+    padding: 4rem 4rem 4rem 0;
+    position: relative;
+}
+
+.presentation--contact ul li:hover {
+    margin: 3rem 0;
+}
+
+.presentation--contact--li svg {
+    fill: #811453;
+}
+
+.presentation--contact--li:hover svg {
+    fill: var(--color-gold);
+    transform: translateY(-5px);
+    white-space: pre-wrap;
+}
+
+/* end */
+
