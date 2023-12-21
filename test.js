@@ -9,6 +9,7 @@ const app = {
   leftSide: document.querySelector(".leftSide"),
   rightSide: document.querySelector(".rightSide"),
   btnElCloseSkill: document.querySelector("button.button__close"),
+  spanBorderRightSideEl: document.querySelectorAll('.span__border'),
   /**
    * Méthodes
    */
@@ -145,6 +146,9 @@ const app = {
     app.skillsChoiceContainer.classList.add('skills__choice--container--hidden');
     app.btnElCloseSkill.style.display = "block";
     app.rightSide.classList.add("skills__active");
+    app.spanBorderRightSideEl.forEach(function(spanEl){
+      spanEl.style.display = "inline";
+    });
   },
 
   handleHiddenListSkillTechniques: function () {
@@ -156,6 +160,9 @@ const app = {
   handleHiddenListSkillHumaines: function () {
     app.rightSide.classList.remove("skills__active");
     app.btnElCloseSkill.style.display = "none";
+    app.spanBorderRightSideEl.forEach(function(spanEl){
+      spanEl.style.display = "none";
+    });
     app.skillsChoiceContainer.classList.remove('skills__choice--container--hidden');
   },
 
