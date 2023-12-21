@@ -180,5 +180,20 @@
 
 }
 
+.skills__choice--container .button {
+    color: var(--text-primary);
+    font-size: 8rem;
+    border: 3px;
+    transition: transform 0.5s ease;
+}
 
-
+.skills__choice--container .button:hover {
+    color: var(--text-primary);
+    font-size: 8rem;
+    transform: rotate(-2deg);
+}
+.skills__choice--container .button:nth-child(2):hover {
+    color: var(--text-primary);
+    font-size: 8rem;
+    transform: rotate(2deg);
+}

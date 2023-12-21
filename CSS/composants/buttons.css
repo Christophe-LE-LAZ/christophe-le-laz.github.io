@@ -190,14 +190,14 @@ button.button__close:hover .inner:after {
   }
   .button-3D-effect span {
     display: block;
-    padding: 10px 6px;
+    padding: 2rem;
     font-weight: 600;
-    color: #1d1d1d;
-    font-size: 5rem;
-    min-height: 50px;
+    color: var(--text-primary);
+    font-size: 8rem;
+    min-width: 40rem;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0) inset;
     position: relative;
-    background-color: #fde596;
+    background-color: var(--color-gold);
     transform-style: preserve-3d;
     transform-origin: top;
     transition: transform 0.3s ease-out;
@@ -218,7 +218,6 @@ button.button__close:hover .inner:after {
     background-color: #fd96cd;
     transform: rotateX(-90deg);
     border-radius: 0.5rem;
-
   }
   .button-3D-effect:hover span {
     transform: rotateX(90deg) translateY(-50%); 
@@ -231,8 +230,6 @@ button.button__close:hover .inner:after {
 /* end */
 
 /* button scroll up */
-
-/* bouton scroll */
 
 #scrollButton {
     display: flex;
@@ -335,3 +332,66 @@ button.button__close:hover .inner:after {
     transform: rotate(10deg);
 }
 /*end*/
+
+/* button perspective */
+
+.button-perspective {
+    background-color: transparent;
+    border: 0 solid #E5E7EB;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    font-family: var(--font-family-primary);
+    font-size: 8rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.75rem;
+    text-align: center;
+    /* text-decoration: none #000000 solid; */
+    text-decoration-thickness: auto;
+    width: 100%;
+    max-width: 460px;
+    position: relative;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    height: 20rem;
+  }
+  
+  .button-perspective:focus {
+    outline: 0;
+  }
+  
+  .button-perspective:hover {
+    background-color: transparent;
+  }
+  
+  .button-perspective:before {
+    content: '';
+    position: absolute;
+    border: 5px solid #fff;
+    border-right: none;
+    bottom: -20px;
+    left: -40px;
+    width: 20%;
+    height: calc(100% + 50px);
+  }
+
+  .button-perspective:after {
+    content: '';
+    position: absolute;
+    border: 5px solid #fff;
+    border-left: none;
+    bottom: -20px;
+    right: -40px;
+    width: 20%;
+    height: calc(100% + 50px);
+  }
+  
+  .button-perspective:hover:after, .button-perspective:hover:before {
+    border-color: var(--color-gold);
+    width: 100%;
+    transition: width 0.6s ease, height 0.6s ease;
+  }

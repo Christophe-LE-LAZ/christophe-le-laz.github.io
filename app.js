@@ -2,8 +2,13 @@ const app = {
   /**
    * Propriétés
    */
+  btnElSkillTechniques: document.querySelector(".skills .techniques"),
+  btnElSkillHumaines: document.querySelector(".skills .humaines"),
   skillsContainer: document.querySelector(".skillsContainer"),
+  skillsChoiceContainer: document.querySelector(".skills__choice--container"),
   leftSide: document.querySelector(".leftSide"),
+  rightSide: document.querySelector(".rightSide"),
+  btnElCloseSkill: document.querySelector("button.button__close"),
   /**
    * Méthodes
    */
@@ -13,10 +18,44 @@ const app = {
     app.addClickBtnRealisation();
     app.addClickChevronDown();
     app.addClickElH2Competences();
+    app.addClickBtnSkillTechniques();
+    app.addClickBtnSkillHumaines();
+    app.addClickBtnCloseSkillTechniques();
+    app.addClickBtnCloseSkillHumaines();
     app.addClickProjectEvents();
     app.showProject("projet1");
     app.initScrollButton();
     app.initAnimation();
+  },
+
+  addClickBtnSkillTechniques: function () {
+    app.btnElSkillTechniques.addEventListener(
+      "click",
+      app.handleShowListSkillTechniques
+    );
+  },
+
+  addClickBtnSkillHumaines: function () {
+    app.btnElSkillHumaines.addEventListener(
+      "click",
+      app.handleShowListSkillHumaines
+    );
+  },
+
+  addClickBtnCloseSkillTechniques: function () {
+    const btnElCloseSkill = document.querySelector("button.button__close");
+    btnElCloseSkill.addEventListener(
+      "click",
+      app.handleHiddenListSkillTechniques
+    );
+  },
+
+  addClickBtnCloseSkillHumaines: function () {
+    const btnElCloseSkill = document.querySelector("button.button__close");
+    btnElCloseSkill.addEventListener(
+      "click",
+      app.handleHiddenListSkillHumaines
+    );
   },
 
   addClickBtnRealisation: function () {
@@ -94,6 +133,30 @@ const app = {
     if (projetElement) {
       projetElement.style.display = "block";
     }
+  },
+
+  handleShowListSkillTechniques: function () {
+    app.skillsChoiceContainer.classList.add('skills__choice--container--hidden');
+    app.btnElCloseSkill.style.display = "block";
+    app.leftSide.classList.add("skills__active");
+  },
+
+  handleShowListSkillHumaines: function () {
+    app.skillsChoiceContainer.classList.add('skills__choice--container--hidden');
+    app.btnElCloseSkill.style.display = "block";
+    app.rightSide.classList.add("skills__active");
+  },
+
+  handleHiddenListSkillTechniques: function () {
+    app.leftSide.classList.remove("skills__active");
+    app.btnElCloseSkill.style.display = "none";
+    app.skillsChoiceContainer.classList.remove('skills__choice--container--hidden'); 
+  },
+
+  handleHiddenListSkillHumaines: function () {
+    app.rightSide.classList.remove("skills__active");
+    app.btnElCloseSkill.style.display = "none";
+    app.skillsChoiceContainer.classList.remove('skills__choice--container--hidden');
   },
 
   initScrollButton: function () {
