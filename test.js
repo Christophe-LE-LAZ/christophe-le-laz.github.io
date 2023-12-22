@@ -60,7 +60,7 @@ const app = {
   },
 
   addClickBtnRealisation: function () {
-    const liElNavHeader = document.querySelector(".nav__ul li.button.type1");
+    const liElNavHeader = document.querySelector(".nav__ul li.button__border.button__border--type1");
     liElNavHeader.addEventListener("click", app.handleShowListProjects);
   },
   addClickChevronDown: function () {
@@ -225,7 +225,7 @@ const app = {
       "Amusant",
     ];
 
-    const morphTime = 0.8;
+    const morphTime = 1.5;
     const cooldownTime = 0.25;
 
     let skillIndex = skillValues.length - 1;

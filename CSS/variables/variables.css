@@ -1,10 +1,11 @@
 :root {
     --bg-color: linear-gradient(to right, #24243E, #302B63, #0F0C29);
-    --text-primary: white;
     --color-gold: rgb(211, 183, 24);
+    --color-section-border: #6e7491;
     --drop-shadow: drop-shadow(0 0 10px #d3d3d3);
     --font-family-primary: 'Hammersmith One', sans-serif;
-    --text--shadow :  0 0 10px var(--color1),
+    --text-primary: white;
+    --text-shadow :  0 0 10px var(--color1),
     0 0 20px var(--color1),
     0 0 40px var(--color1),
     0 0 80px var(--color1);

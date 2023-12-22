@@ -8,13 +8,18 @@
     width: 90vw;
 }
 
+h2#realisations {
+    color: var(--color-gold, white);
+
+}
+
 #left-zone {
     align-items: center;
     display: flex;
     flex-grow: 0;
     justify-content: left;
     height: 75%;
-    width: 350px;
+    width: 30%;
 }
 
 #left-zone .list {
@@ -31,11 +36,12 @@
 
 #left-zone .list li.item input[type="radio"]~label {
     display: block;
-    font-size: 2rem;
+    font-size: 2.5rem;
     height: 50px;
     line-height: 50px;
     opacity: 0.5;
     text-align: center;
+    color: var(--text-primary);
 }
 
 #left-zone .list li.item input[type="radio"]~label:first-letter {
@@ -77,11 +83,16 @@
 
 #left-zone .list li.item input[type="radio"]:checked~label {
     animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    font-size: 2.5rem;
+    font-size: 3rem;
     opacity: 1;
 }
 
-#left-zone .list li.item input[type="radio"]:checked~label.projet1 {
+#left-zone .list li.item input[type="radio"]:checked~label {
+    border-right: solid 4px var(--color-gold);
+    color: var(--color-gold);
+}
+
+/* #left-zone .list li.item input[type="radio"]:checked~label.projet1 {
     border-right: solid 4px #d64541;
     color: #d64541;
 }
@@ -99,7 +110,7 @@
 #left-zone .list li.item input[type="radio"]:checked~label.projet4 {
     border-right: solid 4px #f27935;
     color: #f27935;
-}
+} */
 
 #middle-border {
     background-color: #eee;
