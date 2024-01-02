@@ -23,19 +23,9 @@ footer {
 
 .footer__contacts .presentation--contact--li {
     padding: 4rem;
+    transition : margin-top 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-.footer__contacts .presentation--contact--li.data--title::before, .footer__contacts .presentation--contact--li.data--title:hover::before {
-    background-color: red;
-    bottom: 100%;
-    border-radius: 5px;
-    content: attr(data-title);
-    color: var(--text-primary, white);
-    font-family: var(--font-family-primary);
-    font-size: 1.4rem;
-    left: 50%;
-    padding: 5px;
-    position: absolute;
-    transform: translateX(-50%);
-    width: 90%;
+.footer__contacts--nav .presentation--contact--li:hover {
+    margin-top: 5rem;
 }

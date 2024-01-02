@@ -9,7 +9,7 @@ const app = {
   leftSide: document.querySelector(".leftSide"),
   rightSide: document.querySelector(".rightSide"),
   btnElCloseSkill: document.querySelector("button.button__close"),
-  spanBorderRightSideEl: document.querySelectorAll('.span__border'),
+  spanBorderRightSideEl: document.querySelectorAll(".span__border"),
   /**
    * Méthodes
    */
@@ -27,6 +27,7 @@ const app = {
     app.showProject("projet1");
     app.initScrollButton();
     app.initAnimation();
+    app.addClickBtnScrollUp();
   },
 
   addClickBtnSkillTechniques: function () {
@@ -60,7 +61,9 @@ const app = {
   },
 
   addClickBtnRealisation: function () {
-    const liElNavHeader = document.querySelector(".nav__ul li.button__border.button__border--type1");
+    const liElNavHeader = document.querySelector(
+      ".nav__ul li.button__border.button__border--type1"
+    );
     liElNavHeader.addEventListener("click", app.handleShowListProjects);
   },
   addClickChevronDown: function () {
@@ -78,6 +81,11 @@ const app = {
   addClickElH2Competences: function () {
     const h2Competences = document.querySelector("#competences h2");
     h2Competences.addEventListener("click", app.handleShowListCompetences);
+  },
+
+  addClickBtnScrollUp: function () {
+    const scrollButton = document.getElementById("scrollButton");
+    scrollButton.addEventListener("click", app.handleShowHome);
   },
 
   handleDisplayProject: function (event) {
@@ -105,6 +113,11 @@ const app = {
     const sectionRealisation = document.getElementById("realisations");
     if (sectionRealisation) {
       sectionRealisation.scrollIntoView({ behavior: "smooth" });
+      setTimeout(function () {
+        // Ajoutez un retrait en pixels à la fenêtre
+        const retraitEnPixels = 50; // ajustez la valeur en fonction de vos besoins
+        window.scroll(0, window.scrollY - retraitEnPixels);
+      }, 1000); // ajustez la valeur du délai en fonction de vos besoins
     }
   },
   handleShowListCompetences: function (event) {
@@ -118,6 +131,13 @@ const app = {
       }, 1000); // ajustez la valeur du délai en fonction de vos besoins
     }
   },
+  handleShowHome: function (event) {
+    const sectionHeader = document.getElementById("header");
+    if (sectionHeader) {
+      sectionHeader.scrollIntoView({ behavior: "smooth" });
+    }
+  },
+
   hideCurrentProject: function () {
     const projets = ["projet1", "projet2", "projet3", "projet4"];
 
@@ -137,16 +157,20 @@ const app = {
   },
 
   handleShowListSkillTechniques: function () {
-    app.skillsChoiceContainer.classList.add('skills__choice--container--hidden');
+    app.skillsChoiceContainer.classList.add(
+      "skills__choice--container--hidden"
+    );
     app.btnElCloseSkill.style.display = "block";
     app.leftSide.classList.add("skills__active");
   },
 
   handleShowListSkillHumaines: function () {
-    app.skillsChoiceContainer.classList.add('skills__choice--container--hidden');
+    app.skillsChoiceContainer.classList.add(
+      "skills__choice--container--hidden"
+    );
     app.btnElCloseSkill.style.display = "block";
     app.rightSide.classList.add("skills__active");
-    app.spanBorderRightSideEl.forEach(function(spanEl){
+    app.spanBorderRightSideEl.forEach(function (spanEl) {
       spanEl.style.display = "inline";
     });
   },
@@ -154,16 +178,20 @@ const app = {
   handleHiddenListSkillTechniques: function () {
     app.leftSide.classList.remove("skills__active");
     app.btnElCloseSkill.style.display = "none";
-    app.skillsChoiceContainer.classList.remove('skills__choice--container--hidden'); 
+    app.skillsChoiceContainer.classList.remove(
+      "skills__choice--container--hidden"
+    );
   },
 
   handleHiddenListSkillHumaines: function () {
     app.rightSide.classList.remove("skills__active");
     app.btnElCloseSkill.style.display = "none";
-    app.spanBorderRightSideEl.forEach(function(spanEl){
+    app.spanBorderRightSideEl.forEach(function (spanEl) {
       spanEl.style.display = "none";
     });
-    app.skillsChoiceContainer.classList.remove('skills__choice--container--hidden');
+    app.skillsChoiceContainer.classList.remove(
+      "skills__choice--container--hidden"
+    );
   },
 
   initScrollButton: function () {

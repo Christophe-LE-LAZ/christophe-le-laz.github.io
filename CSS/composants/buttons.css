@@ -237,6 +237,7 @@ button.button__close:hover .inner:after {
     margin-right: 8rem;
     position: absolute;
     right: 0;
+    margin-top: 5rem;
 }
 
 .scroll-up {
@@ -259,18 +260,22 @@ button.button__close:hover .inner:after {
 
 .scroll-up:hover svg line.top {
     transform: translateX(-40px);
+    stroke: var(--color-gold);
 }
 
 .scroll-up:hover svg line.bottom {
     transform: translateX(40px);
+    stroke: var(--color-gold);
 }
 
 .scroll-up:hover svg line.left {
     transform: translateY(40px);
+    stroke: var(--color-gold);
 }
 
 .scroll-up:hover svg line.right {
     transform: translateY(-40px);
+    stroke: var(--color-gold);
 }
 
 .scroll-up .left-bar {
