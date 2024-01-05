@@ -10,6 +10,7 @@ const app = {
   rightSide: document.querySelector(".rightSide"),
   btnElCloseSkill: document.querySelector("button.button__close"),
   spanBorderRightSideEl: document.querySelectorAll(".span__border"),
+
   /**
    * Méthodes
    */
@@ -28,6 +29,7 @@ const app = {
     app.initScrollButton();
     app.initAnimation();
     app.addClickBtnScrollUp();
+
   },
 
   addClickBtnSkillTechniques: function () {
@@ -82,12 +84,10 @@ const app = {
     const h2Competences = document.querySelector("#competences h2");
     h2Competences.addEventListener("click", app.handleShowListCompetences);
   },
-
   addClickBtnScrollUp: function () {
     const scrollButton = document.getElementById("scrollButton");
     scrollButton.addEventListener("click", app.handleShowHome);
   },
-
   handleDisplayProject: function (event) {
     const itemValue = event.currentTarget.id;
     // Cacher tous les projets
