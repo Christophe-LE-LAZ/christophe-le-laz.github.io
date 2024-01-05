@@ -1,3 +1,5 @@
+/* version mobile */
+
 footer {
     align-items: center;
     display: flex;
@@ -28,4 +30,40 @@ footer {
 
 .footer__contacts--nav .presentation--contact--li:hover {
     margin-top: 5rem;
+} 
+
+
+/* version laptop
+
+footer {
+    align-items: center;
+    display: flex;
+    font-size: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 3% 10%;
+    width: 100%;
+    color: #d3d3d3;
 }
+
+.footer__contacts h3 {
+    text-shadow: var(--text-shadow);
+    filter: saturate(60%);
+    color: #d3d3d3;
+    font-size: 4rem;
+}
+
+.footer__contacts--nav {
+    display: flex;
+}
+
+.footer__contacts .presentation--contact--li {
+    padding: 4rem;
+    transition : margin-top 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.footer__contacts--nav .presentation--contact--li:hover {
+    margin-top: 5rem;
+} 
+fin version laptop */

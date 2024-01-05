@@ -1,68 +1,6 @@
-/* début version mobile */
-.bounce-in-right {
-    animation: bounce-in-right 2.1s both;
-    -webkit-animation: bounce-in-right 2.1s both;
-}
-
-.presentation {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    min-height: 70vh;
-    overflow: hidden;
-    text-align: center;
-    width: 100%;
-}
-
-.presentation__content {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-}
-
-.presentation__content--texte {
-    display: flex;
-    flex-direction: column;
-    font-family: var(--font-family-primary);
-    font-size: 2rem;
-    min-height: 50vh;
-    justify-content: space-between;
-
-}
-
-.presentation__content--texte strong {
-    color: var(--text-primary);
-    font-size: 4rem;
-    font-weight: bold;
-}
-
-.presentation__content--texte p {
-    color: var(--color-gold);
-    font-weight: 100;
-    letter-spacing: 0.1rem;
-    text-align: center;
-}
-
-.presentation--visuel {
-    display: none;
-}
-
-.presentation--contact {
-    display: none;
-}
-
-
-
-/* fin version mobile */
-
-/* début version latop 
 /* main presentation */
 
-/* .bounce-in-right {
+.bounce-in-right {
     animation: bounce-in-right 2.1s both;
     -webkit-animation: bounce-in-right 2.1s both;
 }
@@ -154,7 +92,7 @@
     fill: var(--color-gold);
     transform: translateY(-5px);
     white-space: pre-wrap;
-} fin version laptop */
+}
 
-
+/* end */
 
