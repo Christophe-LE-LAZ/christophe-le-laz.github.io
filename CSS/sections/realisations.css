@@ -1,0 +1,184 @@
+.section--realisations {
+    border-top-left-radius: 37px 140px;
+    border-top-right-radius: 23px 130px;
+    border-bottom-left-radius: 110px 19px;
+    border-bottom-right-radius: 120px 24px;
+    border: solid 10px #6e7491;
+    box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
+    width: 90vw;
+    height: 90vh;
+}
+
+h2#realisations {
+    color: var(--color-gold, white);
+
+}
+
+#left-zone {
+    align-items: center;
+    display: flex;
+    flex-grow: 0;
+    justify-content: left;
+    height: 75%;
+    width: 30%;
+}
+
+#left-zone .list {
+    align-content: stretch;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    list-style: none;
+}
+
+#left-zone .list li.item input[type="radio"] {
+    display: none;
+}
+
+#left-zone .list li.item input[type="radio"]~label {
+    display: block;
+    font-size: 2.5rem;
+    height: 50px;
+    line-height: 50px;
+    opacity: 0.5;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+#left-zone .list li.item input[type="radio"]~label:first-letter {
+    text-transform: uppercase;
+}
+
+#left-zone .list li.item input[type="radio"]~label:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+#left-zone .list li.item input[type="radio"]~label.label_projet:before {
+    background-position: center;
+    background-size: 75% 75%;
+    background-repeat: no-repeat;
+    display: block;
+    height: 50px;
+    margin-left: 15px;
+    position: absolute;
+    width: 50px;
+}
+
+#left-zone .list li.item input[type="radio"]~label.projet1:before {
+    /* background-image: url("../images/soft/football.png"); */
+    content: '#1';
+}
+
+#left-zone .list li.item input[type="radio"]~label.projet2:before {
+    content: '#2';
+}
+
+#left-zone .list li.item input[type="radio"]~label.projet3:before {
+    content: '#3';
+}
+
+#left-zone .list li.item input[type="radio"]~label.projet4:before {
+    content: '#4';
+}
+
+#left-zone .list li.item input[type="radio"]:checked~label {
+    animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    font-size: 3rem;
+    opacity: 1;
+}
+
+#left-zone .list li.item input[type="radio"]:checked~label {
+    border-right: solid 4px var(--color-gold);
+    color: var(--color-gold);
+}
+
+#middle-border {
+    background-color: #eee;
+    flex-grow: 1;
+    height: 75%;
+    max-width: 2px;
+    z-index: 0;
+}
+
+#right-zone {
+    flex-grow: 3;
+    height: 100%;
+    width: 70%;
+}
+
+#right-zone i {
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+
+#right-zone img,
+#right-zone h3,
+#right-zone p {
+    margin-bottom: 2rem;
+}
+
+#right-zone .content img {
+    height: 30rem;
+    object-fit: contain;
+    width: 70rem;
+    border-radius: 8px;
+    transform-origin: right center;
+    transform: perspective(1000px) rotateY(-10deg) scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    display: block;
+    margin: auto;
+}
+
+#right-zone p {
+    font-size: 2rem;
+    color: var(--text-primary);
+    line-height: 4rem;
+}
+
+#right-zone p a {
+    color: var(--color-gold);
+}
+
+#right-zone  h3, #right-zone i {
+    color: var(--color-gold);
+}
+#right-zone  h3 {
+    font-size: 2.5rem;
+}
+#right-zone i {
+    font-size: 1.8rem;
+}
+#right-zone .content {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 5rem;
+}
+
+#right-zone .content_projet2,
+#right-zone .content_projet3,
+#right-zone .content_projet4 {
+    display: none;
+}
+
+#right-zone .content_projet1,
+#right-zone .content_projet2,
+#right-zone .content_projet3,
+#right-zone .content_projet4 {
+    animation: slide-up 1000ms forwards, fade-in 500ms forwards;
+}
+
+#scene {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: left;
+    margin: auto;
+    margin-top: 6rem;
+    overflow: hidden;
+    width: 70vw;
+}
