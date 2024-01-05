@@ -7,7 +7,7 @@
     border: solid 10px #6e7491;
     box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
     width: 90vw;
-    height: 90vh;
+    height: auto;
 }
 
 h2#realisations {
