@@ -1,17 +1,12 @@
 /* debut version mobile */
 .section--realisations {
-    border-top-left-radius: 37px 140px;
-    border-top-right-radius: 23px 130px;
-    border-bottom-left-radius: 110px 19px;
-    border-bottom-right-radius: 120px 24px;
-    border: solid 10px #6e7491;
-    box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
-    width: 90vw;
+    width: 100%;
     height: auto;
 }
 
 h2#realisations {
     color: var(--color-gold, white);
+    font-size: 3rem;
 
 }
 
@@ -19,9 +14,9 @@ h2#realisations {
     align-items: center;
     display: flex;
     flex-grow: 0;
-    justify-content: left;
+    justify-content: center;
     height: 75%;
-    width: 30%;
+    width: 100%;
 }
 
 #left-zone .list {
@@ -61,7 +56,6 @@ h2#realisations {
     background-repeat: no-repeat;
     display: block;
     height: 50px;
-    margin-left: 15px;
     position: absolute;
     width: 50px;
 }
@@ -84,80 +78,33 @@ h2#realisations {
 
 #left-zone .list li.item input[type="radio"]:checked~label {
     animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    font-size: 3rem;
     opacity: 1;
 }
 
 #left-zone .list li.item input[type="radio"]:checked~label {
-    border-right: solid 4px var(--color-gold);
+    border-right: solid 2px var(--color-gold);
     color: var(--color-gold);
 }
 
 #middle-border {
-    background-color: #eee;
-    flex-grow: 1;
-    height: 75%;
-    max-width: 2px;
-    z-index: 0;
+   display: none;
 }
 
 #right-zone {
     flex-grow: 3;
     height: 100%;
-    width: 70%;
+    margin-top: 50px;
+    width: 100%;
 }
 
-#right-zone i {
-    display: inline-block;
-    font-size: 1.5rem;
-    padding: 0 1rem;
-}
-
-#right-zone img,
-#right-zone h3,
-#right-zone p {
-    margin-bottom: 2rem;
-}
-
-#right-zone .content img {
-    height: 30rem;
-    object-fit: contain;
-    width: 70rem;
-    border-radius: 8px;
-    transform-origin: right center;
-    transform: perspective(1000px) rotateY(-10deg) scale(1.1);
-    transition: transform 0.3s ease-in-out;
-    display: block;
-    margin: auto;
-}
-
-#right-zone p {
-    font-size: 2rem;
-    color: var(--text-primary);
-    line-height: 4rem;
-}
-
-#right-zone p a {
-    color: var(--color-gold);
-}
-
-#right-zone  h3, #right-zone i {
-    color: var(--color-gold);
-}
-#right-zone  h3 {
-    font-size: 2.5rem;
-}
-#right-zone i {
-    font-size: 1.8rem;
-}
 #right-zone .content {
     align-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 5rem;
 }
+
 
 #right-zone .content_projet2,
 #right-zone .content_projet3,
@@ -172,15 +119,69 @@ h2#realisations {
     animation: slide-up 1000ms forwards, fade-in 500ms forwards;
 }
 
+#right-zone i {
+    display: inline-block;
+    font-size: 1.8rem;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+#right-zone .content img {
+    min-height: 30rem;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+}
+
+
+#right-zone img,
+#right-zone h3,
+#right-zone p {
+    margin-bottom: 2rem;
+}
+
+#right-zone  h3, #right-zone i {
+    color: var(--color-gold);
+}
+#right-zone  h3 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#right-zone .name--technology {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#right-zone p {
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-primary);
+    font-weight: 100;
+    line-height: 3rem;
+    text-align: center;
+}
+
+#right-zone p a {
+    color: var(--color-gold);
+}
+
+
+
 #scene {
     align-items: center;
     display: flex;
+    flex-direction: column;
     height: 100%;
     justify-content: left;
     margin: auto;
     margin-top: 6rem;
     overflow: hidden;
-    width: 70vw;
+    width: 100%;
 }
 /* fin version mobile */
 
@@ -193,7 +194,7 @@ h2#realisations {
     border-bottom-right-radius: 120px 24px;
     border: solid 10px #6e7491;
     box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
-    width: 90vw;
+    width: 100%;
     height: 90vh;
 }
 

@@ -34,9 +34,12 @@ h3 {
 
 section {
         margin: auto;
-        margin-bottom: 20rem;
+        margin-top: 5rem;
 }
 
+section:first-of-type {
+        margin-top: 0;
+}
 section:first-of-type,
 section:last-of-type {
         margin-bottom: 3rem;

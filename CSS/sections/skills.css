@@ -7,7 +7,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: auto;
     justify-content: center;
     padding: 2rem;
     width: 100%;
@@ -155,7 +155,7 @@
     align-items: center;
     display: none;
     flex-direction: column;
-    height: 100%;
+    height: 22rem;
     justify-content: center;
     opacity: 0;
     position: relative;
@@ -180,15 +180,13 @@
     width: 100%;
 }
 
-
-
 .skills .rightSide .span__border {
   position: absolute;
   border-radius: 100vmax;
 }
 
 .skills .rightSide .span__border.top {
-  top: 25%;
+  top: 0;
   left: 0;
   width: 0;
   height: 5px;
