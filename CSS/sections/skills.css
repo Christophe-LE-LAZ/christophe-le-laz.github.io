@@ -1,16 +1,14 @@
-
-
 /* debut version mobile */
 
 /* skills */
 #competences {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    justify-content: center;
-    padding: 2rem;
-    width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
 }
 
 #competences h2 {
@@ -26,22 +24,23 @@
 }
 
 .skills {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-around;
-    margin-bottom: 30px;
-    position: relative;
-    width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
 }
+
 .skills__choice--container {
-    align-items: center;
-    animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-evenly;
+  align-items: center;
+  animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
 }
 
 .skills__choice--container .button__border.button__border--type1 {
@@ -56,6 +55,7 @@
   font-size: 4rem;
   transform: rotate(-2deg);
 }
+
 .skills__choice--container .button__border.button__border--type1:nth-child(2):hover {
   transform: rotate(2deg);
 }
@@ -67,42 +67,42 @@
 }
 
 .skills .leftSide {
-    align-content: center;
-    display: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 100%;
-    opacity: 0;
-    transform: translatex(800%);
-    width: 100%;
+  align-content: center;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  opacity: 0;
+  transform: translatex(800%);
+  width: 100%;
 }
 
 .skills .leftSide .skillsContainer {
-    align-content: center;
-    align-items: center;
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    /* gap: 15px; */
-    height: auto;
-    justify-content: space-between;
-    padding: 2%;
-    position: relative;
-    width: 100%;
-    margin-bottom: 5rem;
+  align-content: center;
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 15px; */
+  height: auto;
+  justify-content: space-between;
+  padding: 2%;
+  position: relative;
+  width: 100%;
+  margin-bottom: 5rem;
 }
 
 
 
 .skills .leftSide .skill {
-    border-radius: 10px;
-    background-color: rgba(211, 183, 24, 0.200);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 30px;
-    padding: 10px 12px;
-    width: 45%;
+  border-radius: 10px;
+  background-color: rgba(211, 183, 24, 0.200);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 10px 12px;
+  width: 45%;
 }
 
 .skills .leftSide .skill:nth-child(odd) {
@@ -110,74 +110,74 @@
 }
 
 .skills .leftSide .skill .iconContainer {
-    align-items: center;
-    /* background-color: white; */
-    border-radius: 10px;
-    display: flex;
-    flex: 0 0 50%;
-    justify-content: center;
-    /* height: 100px;
+  align-items: center;
+  /* background-color: white; */
+  border-radius: 10px;
+  display: flex;
+  flex: 0 0 50%;
+  justify-content: center;
+  /* height: 100px;
     width: 100px; */
 }
 
 .skills .leftSide .skill .iconContainer img {
-    height: 70%;
-    mix-blend-mode: luminosity;
-    opacity: .8
+  height: 70%;
+  mix-blend-mode: luminosity;
+  opacity: .8
 }
 
 .skills .leftSide .skill .skillContent {
-    display: flex;
-    flex: 0 0 50%;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
+  display: flex;
+  flex: 0 0 50%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .skills .leftSide .skill .skillContent p {
-    color: var(--text-primary);
-    font-family: var(--font-family-primary);
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.4;
-    margin: 0;
+  color: var(--text-primary);
+  font-family: var(--font-family-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
 }
 
-.skills .leftSide .skill:nth-child(4) .skillContent p, 
-  .skills .leftSide .skill:nth-child(7) .skillContent p {
+.skills .leftSide .skill:nth-child(4) .skillContent p,
+.skills .leftSide .skill:nth-child(7) .skillContent p {
   font-size: 1.4rem;
 }
 
 /* right */
 
 .skills .rightSide {
-    align-items: center;
-    display: none;
-    flex-direction: column;
-    height: 22rem;
-    justify-content: center;
-    opacity: 0;
-    position: relative;
-    width: 100%;
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  height: 22rem;
+  justify-content: center;
+  opacity: 0;
+  position: relative;
+  width: 100%;
 }
 
 .skills .rightSide .container-animate {
-    margin: auto;
-    width: 100%;
-    filter: url(#threshold) blur(0.6px);
+  margin: auto;
+  width: 100%;
+  filter: url(#threshold) blur(0.6px);
 }
 
 .skills .rightSide .container-animate .animateSkill1,
 .skills .rightSide .container-animate .animateSkill2 {
-    color: var(--text-primary);
-    display: inline-block;
-    font-family: 'Hammersmith One', sans-serif;
-    font-size: 3rem;
-    position: absolute;
-    text-align: center;
-    user-select: none;
-    width: 100%;
+  color: var(--text-primary);
+  display: inline-block;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 3rem;
+  position: absolute;
+  text-align: center;
+  user-select: none;
+  width: 100%;
 }
 
 .skills .rightSide .span__border {
@@ -190,28 +190,25 @@
   left: 0;
   width: 0;
   height: 5px;
-  background: linear-gradient(
-    90deg,
-    transparent 25%,
-    rgba(255, 255, 113, 0.5),
-    rgb(255, 255, 113)
-  );
+  background: linear-gradient(90deg,
+      transparent 25%,
+      rgba(255, 255, 113, 0.5),
+      rgb(255, 255, 113));
   animation: spanAnimateTop 5s ease-in-out infinite;
 }
 
 .skills .rightSide .span__border.bottom {
   right: 0;
   height: 5px;
-  background: linear-gradient(
-    90deg,
-    rgb(255, 255, 113),
-    rgba(255, 255, 113, 0.5),
-    transparent 50%
-  );
+  background: linear-gradient(90deg,
+      rgb(255, 255, 113),
+      rgba(255, 255, 113, 0.5),
+      transparent 50%);
   animation: spanAnimateBottom 5s ease-in-out infinite;
 }
+
 .skills .rightSide .span__border.right {
-display : none;
+  display: none;
 }
 
 .skills .rightSide .span__border.left {
@@ -220,32 +217,43 @@ display : none;
 
 .skills .skills__active {
   animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    opacity: 1;
-    transform: translateY(0);
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* mobile taille M */ 
+/* mobile taille M */
 @media screen and (min-width: 375px) {
-  #competences h2, .skills__choice--container .button__border.button__border--type1 {
+.skills__choice--container .button__border.button__border--type1 {
     font-size: 4rem;
   }
+  
   .skills .leftSide .skill {
     flex-direction: row;
+  }
 }
-/* mobile taille L */ 
+
+/* mobile taille L */
 
 @media screen and (min-width: 425px) {
+
   .skills .rightSide .container-animate .animateSkill1,
-.skills .rightSide .container-animate .animateSkill2 {
+  .skills .rightSide .container-animate .animateSkill2 {
     font-size: 4rem;
+  }
+  #competences h2 {
+    font-size: 4rem;
+  }
+}
+/* superieur à mobile L */
+@media screen and (min-width: 700px) {
+  .skills .leftSide .skill .skillContent p , .skills .leftSide .skill:nth-child(4) .skillContent p,
+.skills .leftSide .skill:nth-child(7) .skillContent p {
+  font-size: 2rem;
 }
 }
-
-}
-
 
 /* fin version mobile */
 
@@ -505,9 +513,3 @@ animation: spanAnimateLeft 5s ease-in-out infinite;
 }
 
 fin version laptop  */
-
-
-  
- 
-
-

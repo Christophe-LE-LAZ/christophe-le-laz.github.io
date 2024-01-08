@@ -87,7 +87,7 @@ h2#realisations {
 }
 
 #middle-border {
-   display: none;
+    display: none;
 }
 
 #right-zone {
@@ -142,10 +142,12 @@ h2#realisations {
     margin-bottom: 2rem;
 }
 
-#right-zone  h3, #right-zone i {
+#right-zone h3,
+#right-zone i {
     color: var(--color-gold);
 }
-#right-zone  h3 {
+
+#right-zone h3 {
     font-size: 2.5rem;
     text-align: center;
 }
@@ -170,8 +172,6 @@ h2#realisations {
     color: var(--color-gold);
 }
 
-
-
 #scene {
     align-items: center;
     display: flex;
@@ -183,7 +183,19 @@ h2#realisations {
     overflow: hidden;
     width: 100%;
 }
+
+/* mobile taille L */
+@media screen and (min-width: 425px) {
+
+   h2#realisations {
+        font-size: 4rem;
+    }
+
+}
 /* fin version mobile */
+
+
+
 
 /* debut version laptop
 

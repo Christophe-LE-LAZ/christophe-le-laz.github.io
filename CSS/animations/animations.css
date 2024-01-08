@@ -233,13 +233,13 @@
 
 /*end*/
 
-/* debut laptop 
+/* debut laptop */
 
 @media only screen and (min-width:1024px) {
 
 /* animation span rightSide */
 
-/* @keyframes spanAnimateTop {
+@keyframes spanAnimateTop {
         25% {
                 width: 100%;
                 opacity: 1;
@@ -249,7 +249,7 @@
         100% {
                 opacity: 0;
         }
-} /*
+} 
 
 @keyframes spanAnimateBottom {
 
@@ -306,6 +306,6 @@
 }
 
 /*end*/
+}
 
-
-/* } fin laptop  */
+/*  fin laptop  */
