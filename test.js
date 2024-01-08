@@ -216,11 +216,12 @@ const app = {
         if (sceneRect.top < window.innerHeight && sceneRect.bottom >= 0) {
           // Afficher le bouton si la section est visible et l'utilisateur défile vers le bas
           if (scrollTop > lastScrollTop) {
+            if (window.innerWidth >= 1024) {
             // Utiliser setTimeout pour retarder l'apparition du bouton
             setTimeout(function () {
               scrollButton.style.display = "flex";
             }, 500); // Ajouter un délai de 500 millisecondes (0.5 secondes)
-          }
+          } }
         } else {
           // Cacher le bouton si la section n'est pas visible ou si l'utilisateur remonte
           // Utiliser setTimeout pour retarder la disparition du bouton
