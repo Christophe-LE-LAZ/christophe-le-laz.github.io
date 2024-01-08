@@ -200,6 +200,76 @@
         }
 }
 
+/*end*/
+
+/* animation display skills__choice--container */
+@keyframes slide-in-elliptic-top-fwd {
+        0% {
+                transform: translateY(-600px) rotateX(-30deg) scale(0);
+                transform-origin: 50% 100%;
+                opacity: 0;
+        }
+
+        100% {
+                transform: translateY(0) rotateX(0) scale(1);
+                transform-origin: 50% 1400px;
+                opacity: 1;
+        }
+}
+/*end*/
+
+
+
+/* animation slide projets */
+@keyframes slide-up {
+        0% {
+                transform: translateY(100%);
+        }
+
+        100% {
+                transform: translateY(0%);
+        }
+}
+
+/*end*/
+
+/* debut laptop 
+
+@media only screen and (min-width:1024px) {
+
+/* animation span rightSide */
+
+/* @keyframes spanAnimateTop {
+        25% {
+                width: 100%;
+                opacity: 1;
+        }
+
+        30%,
+        100% {
+                opacity: 0;
+        }
+} /*
+
+@keyframes spanAnimateBottom {
+
+        0%,
+        50% {
+                opacity: 0;
+                width: 0;
+        }
+
+        75% {
+                opacity: 1;
+                width: 100%;
+        }
+
+        76%,
+        100% {
+                opacity: 0;
+        }
+}
+
 @keyframes spanAnimateRight {
 
         0%,
@@ -237,34 +307,5 @@
 
 /*end*/
 
-/* animation display skills__choice--container */
-@keyframes slide-in-elliptic-top-fwd {
-        0% {
-                transform: translateY(-600px) rotateX(-30deg) scale(0);
-                transform-origin: 50% 100%;
-                opacity: 0;
-        }
 
-        100% {
-                transform: translateY(0) rotateX(0) scale(1);
-                transform-origin: 50% 1400px;
-                opacity: 1;
-        }
-}
-
-/*end*/
-
-
-
-/* animation slide projets */
-@keyframes slide-up {
-        0% {
-                transform: translateY(100%);
-        }
-
-        100% {
-                transform: translateY(0%);
-        }
-}
-
-/*end*/
+/* } fin laptop  */
