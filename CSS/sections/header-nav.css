@@ -1,8 +1,8 @@
 /* version mobile */
 header {
-    width: 100%;
     margin: auto;
     margin-top: 3rem;
+    width: 100%;
 }
 
 nav {
@@ -23,7 +23,6 @@ header ul li:first-child {
     color: var(--text-primary);
     display: block;
     font-family: 'Hammersmith One', sans-serif;
-    /* font-size: 2rem; */
     font-weight: 400;
     letter-spacing: 0.1rem;
     text-align: center;
