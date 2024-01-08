@@ -14,10 +14,12 @@
 }
 
 #competences h2 {
-    color: var(--color-gold, white);
-    margin-bottom: 50px;
-    width: 100%;
+  color: var(--color-gold, white);
+  font-size: 3rem;
+  margin-bottom: 50px;
+  width: 100%;
 }
+
 
 #competences .button__close {
   margin-bottom: 20px;
@@ -45,7 +47,7 @@
 .skills__choice--container .button__border.button__border--type1 {
   border: 0.3rem;
   color: var(--text-primary);
-  font-size: 4rem;
+  font-size: 3rem;
   transition: transform 0.5s ease;
 }
 
@@ -96,10 +98,11 @@
     border-radius: 10px;
     background-color: rgba(211, 183, 24, 0.200);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-bottom: 30px;
     padding: 10px 12px;
-    width: 48%;
+    width: 45%;
 }
 
 .skills .leftSide .skill:nth-child(odd) {
@@ -135,7 +138,7 @@
 .skills .leftSide .skill .skillContent p {
     color: var(--text-primary);
     font-family: var(--font-family-primary);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.4;
     margin: 0;
@@ -143,7 +146,7 @@
 
 .skills .leftSide .skill:nth-child(4) .skillContent p, 
   .skills .leftSide .skill:nth-child(7) .skillContent p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 /* right */
@@ -167,16 +170,17 @@
 
 .skills .rightSide .container-animate .animateSkill1,
 .skills .rightSide .container-animate .animateSkill2 {
-    position: absolute;
-    width: 100%;
+    color: var(--text-primary);
     display: inline-block;
-    color: #fff;
-    /* font-family: "Hammersmith One", sans-serif; */
     font-family: 'Hammersmith One', sans-serif;
-    font-size: 4rem;
+    font-size: 3rem;
+    position: absolute;
     text-align: center;
     user-select: none;
+    width: 100%;
 }
+
+
 
 .skills .rightSide .span__border {
   position: absolute;
@@ -223,6 +227,25 @@ display : none;
     margin-top: 20px;
     opacity: 1;
     transform: translateY(0);
+}
+
+/* mobile taille M */ 
+@media screen and (min-width: 375px) {
+  #competences h2, .skills__choice--container .button__border.button__border--type1 {
+    font-size: 4rem;
+  }
+  .skills .leftSide .skill {
+    flex-direction: row;
+}
+/* mobile taille L */ 
+
+@media screen and (min-width: 425px) {
+  .skills .rightSide .container-animate .animateSkill1,
+.skills .rightSide .container-animate .animateSkill2 {
+    font-size: 4rem;
+}
+}
+
 }
 
 
