@@ -10,7 +10,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    min-height: 70vh;
+    min-height: 90vh;
     overflow: hidden;
     text-align: center;
     width: 100%;
@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     font-family: var(--font-family-primary);
-    font-size: 2rem;
+    font-size: 2.5rem;
     min-height: 50vh;
     justify-content: space-between;
 

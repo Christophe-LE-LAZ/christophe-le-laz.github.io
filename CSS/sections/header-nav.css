@@ -2,6 +2,7 @@
 header {
     width: 100%;
     margin: auto;
+    margin-top: 3rem;
 }
 
 nav {
@@ -12,23 +13,34 @@ header ul li:first-child {
     display: none;
 }
 
-.nav__li--a {
+
+.nav__ul li.button__border--type1 {
+    margin-bottom: 20px;
+    padding: 1rem;
+}
+
+.nav__ul .nav__li--a {
     color: var(--text-primary);
     display: block;
     font-family: 'Hammersmith One', sans-serif;
-    font-size: 2rem;
+    /* font-size: 2rem; */
     font-weight: 400;
     letter-spacing: 0.1rem;
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
     width: auto;
+}
+
+.nav__li--a[href*="mailto"]::after {
+    content : 'CONTACT'
 }
 
 .nav__ul {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 /* version laptop */
