@@ -186,9 +186,10 @@ button.button__close:hover .inner:after {
 }
 
 /* fin version mobile */
-
-
 /* debut version laptop */
+@media only screen and (min-width:1024px) {
+
+}
 /* header nav */
 
 /* Button component */
