@@ -101,6 +101,8 @@
   margin-bottom: 30px;
   padding: 10px 12px;
   width: 45%;
+  max-height: 116px ;
+
 }
 
 .skills .leftSide .skill:nth-child(odd) {
