@@ -105,7 +105,6 @@ h2#realisations {
     height: 100%;
 }
 
-
 #right-zone .content_projet2,
 #right-zone .content_projet3,
 #right-zone .content_projet4 {
@@ -197,8 +196,30 @@ h2#realisations {
 
 
 
-/* debut version laptop
+/* debut version laptop */
+@media only screen and (min-width:1024px) {
+#right-zone .content img {
+    width: 60%;
+}
 
+#right-zone i {
+  
+    font-size: 2rem;
+
+}
+#right-zone p {
+    font-size: 2rem;
+   
+}
+
+#right-zone .name--technology {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+}
+/*
 .section--realisations {
     border-top-left-radius: 37px 140px;
     border-top-right-radius: 23px 130px;
