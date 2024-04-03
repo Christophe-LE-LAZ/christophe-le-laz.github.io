@@ -9,7 +9,7 @@
     font-size: 1.5rem;
     margin: 1em 0.8em;
     outline: none;
-    padding: 1em 1.5em;
+    padding: 1em 1em;
     position: relative;
 }
 
@@ -193,18 +193,18 @@ button.button__close:hover .inner:after {
 /* header nav */
 
 /* Button component */
-/* .button__border {
+
+.button__border {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.5rem;
     margin: 1em 0.8em;
     outline: none;
     padding: 1em 1.5em;
     position: relative;
 }
-
-
+/* 
 .button__border.button__border--type1::after,
 .button__border.button__border--type1::before {
     border: 2px solid;

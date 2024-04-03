@@ -265,14 +265,19 @@
     border: solid 0.5rem var(--color-section-border);
     box-shadow: 0.3rem 1.5rem 0.8rem -1rem rgba(0, 0, 0, 0.3);
     flex-direction: row;
-    height: 90vh;
+    height: 95vh;
   }
   #competences h2 {
-    width: 50%;
+    width: 40%;
+  }
+
+  #competences .button__close {
+    margin-top: 20px;
   }
   .skills {
     perspective: 100rem;
-    width: 50%;
+    width: 60%;
+    height: 100%;
   }
   .skills__choice--container .button__border.button__border--type1,
   .skills__choice--container .button__border.button__border--type1:hover {
@@ -282,12 +287,14 @@
     gap: 2%;
   }
   .skills .leftSide .skillsContainer {
+    align-content: flex-start;
     gap: 15px;
     justify-content: center;
-    -webkit-transform: perspective(150rem) rotateY(-15deg) translateZ(5px) translateX(-70px);
-    transform: perspective(150rem) rotateY(-15deg) translateZ(5px) translateX(-70px);
+    -webkit-transform: perspective(100rem) rotateY(-15deg) translateZ(5px) translateX(-50px);
+    transform: perspective(100rem) rotateY(-15deg) translateZ(5px) translateX(-50px);
     -webkit-transform-origin: right;
     transform-origin: right;
+    height: 100%;
   }
   .skills .leftSide .skillsContainer:before {
     background-position: 50%;
@@ -295,7 +302,6 @@
     border-radius: 10px;
     content: "";
     display: block;
-    height: 100%;
     margin: auto;
     opacity: 1;
     position: absolute;
@@ -305,16 +311,17 @@
   .skills .leftSide .skill {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 12px;
-    width: 400px;
   }
   .skills .leftSide .skill:nth-child(odd) {
     margin-right: inherit;
   }
   .skills .leftSide .skill .iconContainer {
-    height: 150px;
+    height: 100px;
     justify-content: center;
-    width: 150px;
+    width: 120px;
   }
   .skills .leftSide .skill .skillContent {
     text-align: left;
@@ -334,7 +341,7 @@
 
 /* right */
 
-/* .skills .rightSide {
+.skills .rightSide {
   align-items: center;
   display: none;
   flex-direction: column;
@@ -358,7 +365,7 @@
   display: inline-block;
   color: #fff;
   font-family: 'Hammersmith One', sans-serif;
-  font-size: 10rem;
+  font-size: 5rem;
   text-align: center;
   user-select: none;
 }
@@ -429,4 +436,5 @@ animation: spanAnimateLeft 5s ease-in-out infinite;
   animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-fin version laptop  */
+/*fin version laptop  */
+
