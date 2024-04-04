@@ -1,0 +1,17 @@
+/* mobile first */ 
+
+h1 {
+    color: var(--text-primary);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture__projet {
+width: 100%;
+height: 50%;
+}
