@@ -91,10 +91,12 @@ const app = {
   },
 
   addClickImageToReelSize: function () {
-    const imageToEnlarge = document.querySelector('.picture-zoom');
-
-    imageToEnlarge.addEventListener('click', function() {
-      window.open(this.src, '_blank', 'width=auto,height=auto');
+    const imagesToEnlarge = document.querySelectorAll('.picture-zoom');
+  
+    imagesToEnlarge.forEach(function(picture) {
+      picture.addEventListener('click', function() {
+        window.open(this.src, '_blank', 'width=auto,height=auto');
+      });
     });
   },
 
