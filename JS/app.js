@@ -29,6 +29,7 @@ const app = {
     app.initScrollButton();
     app.initAnimation();
     app.addClickBtnScrollUp();
+    app.addClickImageToReelSize(); 
 
   },
 
@@ -88,6 +89,16 @@ const app = {
     const scrollButton = document.getElementById("scrollButton");
     scrollButton.addEventListener("click", app.handleShowHome);
   },
+
+  addClickImageToReelSize: function () {
+    const imageToEnlarge = document.querySelector('.picture-zoom');
+
+    imageToEnlarge.addEventListener('click', function() {
+      window.open(this.src, '_blank', 'width=auto,height=auto');
+    });
+  },
+
+
   handleDisplayProject: function (event) {
     const itemValue = event.currentTarget.id;
     // Cacher tous les projets

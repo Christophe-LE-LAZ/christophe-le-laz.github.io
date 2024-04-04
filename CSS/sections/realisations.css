@@ -199,7 +199,7 @@ h2#realisations {
 /* debut version laptop */
 @media only screen and (min-width:1024px) {
 #right-zone .content img {
-    width: 60%;
+    width: 500px;
 }
 
 #right-zone i {
@@ -218,6 +218,31 @@ h2#realisations {
     justify-content: center;
 }
 
+#right-zone .project-picture-idea {
+    height: 500px;
+    width: 500px;
+   
+}
+
+#right-zone .project-picture-idea + i {
+font-size: 1.2rem;
+width: 100%;
+text-align: center;
+margin-top: 2rem;
+color: var(--text-primary);
+}
+#right-zone .project-picture-idea + i a {
+   
+    color: var(--text-primary);
+}
+
+#right-zone .content_projet3 p {
+    font-size: 2.5rem;
+}
+#right-zone .content_projet3 a {
+    display: block;
+    margin-top: 2rem;
+}
 }
 /*
 .section--realisations {
