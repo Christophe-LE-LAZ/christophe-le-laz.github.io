@@ -47,6 +47,10 @@
     text-align: center;
 }
 
+.presentation__content--texte p:nth-child(1), .presentation__content--texte p:nth-child(3) {
+    font-size: 2rem;
+}
+
 .presentation--visuel {
     display: none;
 }
