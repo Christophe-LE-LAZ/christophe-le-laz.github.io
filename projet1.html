@@ -7,7 +7,6 @@
     <title>Christophe Le Laz | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap"
       rel="stylesheet"
@@ -23,13 +22,28 @@
       <nav>
         <ul class="nav__ul">
           <li>
-            <a class="header__logo--link" href="https://christophe-le-laz.github.io/index.html">
-              <img class="header__logo--img" src="images/fou.png" alt="logo fou de bassan"/>
+            <a
+              class="header__logo--link"
+              href="https://christophe-le-laz.github.io/index.html"
+              aria-label="Page d'accueil"
+            >
+              <img
+                class="header__logo--img"
+                src="images/fou.png"
+                alt="logo fou de bassan"
+              />
             </a>
           </li>
-          <li class="button__border button__border--type1" style="display: block;">
-            <a class="nav__li--a" target="_blank" href="mailto:christophe.lelaz.pro@gmail.com">
-            </a>
+          <li
+            class="button__border button__border--type1"
+            style="display: block"
+          >
+            <a
+              class="nav__li--a"
+              target="_blank"
+              href="mailto:christophe.lelaz.pro@gmail.com"
+              aria-label="Envoyer un e-mail à Christophe Le Laz"
+            ></a>
           </li>
         </ul>
       </nav>
@@ -37,53 +51,96 @@
     <section id="section--projet">
       <div class="container">
         <h1>Auparavant</h1>
-        <a href="https://www.auparavant.fr" class="center-picture"><img src="images/projets/auparavant.png" class="picture__projet" alt=""></a>
+        <a href="https://www.auparavant.fr" class="center-picture">
+          <img
+            src="images/projets/auparavant.png"
+            class="picture__projet"
+            alt="Capture d'écran du projet Auparavant"
+          />
+        </a>
         <div class="description">
           <h4>Description du projet</h4>
-          <p>Nos villes évoluent, et par conséquent nos quartiers, nos lieux préférés également...
-            Saurions nous dire ce qu'il y avait avant à tel endroit ? Probablement que non. Après
-            avoir constaté cela, on s'interroge, existe-t-il des ressources sur le web nous
-            permettant facilement d'accéder à la donnée, des images ? Wikipédia répond en
-            partie à ça mais il faut souvent multiplier les recherches pour trouver les
-            informations sur un lieu à différentes époques. C’est ainsi que le projet Auparavant
-            est né.
-            L’objectif de l’application est de permettre aux utilisateurs d’accéder et partager des
-            souvenirs sur un lieu.</p>
-            <p>Les principales fonctionnalités sont :</p>
-            <ul>
-              <li>- Accéder à une liste de souvenir de deux façons soit via une carte interactive
-              soit via une liste de “cards” filtrable (utilisateur non connecté)</li>
-              <li>- Partager un souvenir sur un lieu (utilisateur connecté)</li>
-              <li>- Pour chaque souvenir avoir accès à deux photos (la plus récente du lieu et
-                celle du souvenir) pour avoir un effet avant/après.</li>
-              <li> - À terme avoir des utilisateurs modérateurs pour filtrer le contenu posté par les
-                utilisateurs.</li> 
-              </ul>          
-           
+          <p>
+            Nos villes évoluent, et par conséquent nos quartiers, nos lieux
+            préférés également... Saurions nous dire ce qu'il y avait avant à
+            tel endroit ? Probablement que non. Après avoir constaté cela, on
+            s'interroge, existe-t-il des ressources sur le web nous permettant
+            facilement d'accéder à la donnée, des images ? Wikipédia répond en
+            partie à ça mais il faut souvent multiplier les recherches pour
+            trouver les informations sur un lieu à différentes époques. C’est
+            ainsi que le projet Auparavant est né. L’objectif de l’application
+            est de permettre aux utilisateurs d’accéder et partager des
+            souvenirs sur un lieu.
+          </p>
+          <p>Les principales fonctionnalités sont :</p>
+          <ul>
+            <li>
+              - Accéder à une liste de souvenir de deux façons soit via une
+              carte interactive soit via une liste de “cards” filtrable
+              (utilisateur non connecté)
+            </li>
+            <li>- Partager un souvenir sur un lieu (utilisateur connecté)</li>
+            <li>
+              - Pour chaque souvenir avoir accès à deux photos (la plus récente
+              du lieu et celle du souvenir) pour avoir un effet avant/après.
+            </li>
+            <li>
+              - À terme avoir des utilisateurs modérateurs pour filtrer le
+              contenu posté par les utilisateurs.
+            </li>
+          </ul>
+
           <h4>Description des tâches réalisées</h4>
           <ul>
             <li>- Conception et élaboration du cahier des charges</li>
-            <li>- Développement complet du <a href="https://admin.auparavant.fr">back-office</a> utilisant Symfony</li>
-            <li>- Création et mise en œuvre de l'API pour une communication efficace avec le front-end</li>
-            <li>- Conception et gestion de la base de données pour assurer la stabilité et la performance</li>
+            <li>
+              - Développement complet du
+              <a
+                href="https://admin.auparavant.fr"
+                aria-label="Accéder au back-office du projet Auparavant"
+                >back-office</a
+              >
+              utilisant Symfony
+            </li>
+            <li>
+              - Création et mise en œuvre de l'API pour une communication
+              efficace avec le front-end
+            </li>
+            <li>
+              - Conception et gestion de la base de données pour assurer la
+              stabilité et la performance
+            </li>
             <li>- Déploiement réussi du projet sur un serveur en production</li>
           </ul>
           <h4>Liste des technologies utilisées</h4>
-          <p>Les technologies utilisées pour ce projet ont été pour le back le langage PHP et plus
-            particulièrement son framework Symfony ainsi que le Système de Gestion de Base
-            de Données MariaDB. Pour le front le langage Javascript et plus précisément son
-            framework REACT, ainsi que le framework Tailwind pour le CSS.</p>
-            <a href="https://www.auparavant.fr">Lien vers le projet front</a>
-            <a href="https://www.admin.auparavant.fr">Lien vers le projet back</a>
+          <p>
+            Les technologies utilisées pour ce projet ont été pour le back le
+            langage PHP et plus particulièrement son framework Symfony ainsi que
+            le Système de Gestion de Base de Données MariaDB. Pour le front le
+            langage Javascript et plus précisément son framework REACT, ainsi
+            que le framework Tailwind pour le CSS.
+          </p>
+          <a
+            href="https://www.auparavant.fr"
+            aria-label="Accéder au projet front"
+            >Lien vers le projet front</a
+          >
+          <a
+            href="https://www.admin.auparavant.fr"
+            aria-label="Accéder au projet back"
+            >Lien vers le projet back</a
+          >
         </div>
-        <div><a class="backtohome" href="index.html#realisations">Accueil</a></div>
+        <div>
+          <a class="backtohome" href="index.html#realisations">Accueil</a>
+        </div>
       </div>
     </section>
-      
+
     <footer>
       <div class="footer__contacts">
         <h3>Me contacter</h3>
-        <ul class="footer__contacts--nav"> 
+        <ul class="footer__contacts--nav">
           <li
             class="presentation--contact--li data--title"
             data-title="LinkedIn"
@@ -94,6 +151,7 @@
               data-title="LinkedIn"
               href="https://www.linkedin.com/in/christophe-le-laz"
               spellcheck="false"
+              aria-label="Profil LinkedIn de Christophe Le Laz"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -116,6 +174,7 @@
               data-title="Email"
               href="mailto:christophe.lelaz.pro@gmail.com"
               spellcheck="false"
+              aria-label="Envoyer un email à Christophe Le Laz"
             >
               <svg
                 class="social-link-icon"
@@ -139,6 +198,6 @@
       </div>
       <div>Design, Intégration et Développement by Morskoul</div>
     </footer>
-<script src="JS/app.js"></script>
+    <script src="JS/app.js"></script>
   </body>
 </html>
